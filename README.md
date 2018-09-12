@@ -16,5 +16,5 @@ So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` di
 
 Copyright (c) 2015-2016 00feng00
 
-Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+ZeFeng Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
 Copyright (c) 2013-2016 Blackrock Digital LLC.
