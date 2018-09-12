@@ -2,7 +2,7 @@
 
 ### [View Live ZeFeng Blog &rarr;](https://00feng00.github.io/)
 
-![](https://github.com/00feng00/00feng00.github.io/tree/master/img/blog-desktop.jpg)
+![](https://00feng00.github.io/img/blog-desktop.jpg)
 
 
 
