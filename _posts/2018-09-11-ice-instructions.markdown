@@ -19,7 +19,8 @@ ICE是Alibaba 淘宝内部的一个开元脚手架，它的初始化脚手架我
 <br />
 ICE提供了以下这些功能：
   1、模板自定义创建  2、区块可视化组装 3、 布局自定义生成  4、物料自定义接入 5、 项目仪表盘插件化
-  <p style="color: blue;">个人推荐（尽量使用官方提供的模板和物料）</p>
+  <br />
+  个人推荐（尽量使用官方提供的模板和物料）
 ## D2 Admin
   D2 Admin是一套管理系统脚手架，ICE推荐的Vue物料当中比较好的一个模板。这个是我们这篇文章讲的重点。
  
@@ -51,9 +52,50 @@ ICE提供了以下这些功能：
     <div class="d2-app-loading-sub-title">欢迎使用 数据中心管理后台等在为您加载中。。。</div>
     <div class="d2-app-loading-sub-info">如果很久很久都没有加载成功，请清空缓存重新加载页面</div>
 ```
-<span style="color: green;">说明:</span>一个是修改图标（新增图标在public文件夹里面添加相对应的图片），一个是修改标题，下面这两个是修改文案提示。
+说明:一个是修改图标（新增图标在public文件夹里面添加相对应的图片），一个是修改标题，下面这两个是修改文案提示。
 _____________________________________________________
-下面开始进入项目开发了
+下面开始进入项目开发了:
+   开始讲内容前，首先讲一下，每一个页面切换都是由路由控制的，因此我们要重点看的有三个文件，router文件夹里面的index.js、routerConfig.js、 menuConfig.js，为什么这么说呢。我们在做页面跳转，tab跳转，菜单点击跳转都需要操作到这三个文件。<br />
+   注意注意，前方高能，一定要看，一定要看。<br />
+   后端进行开发建议使用Iceworks提供的功能进行相对应的操作，这样就可以不需要考虑那么多复杂的关系。前端进行开发，直接在pages添加新文件夹，然后在routerConfig.js、menuConfig.js添加对应的关系就可以了，具体代码如下：
+```
+  {
+    path: '/demo2',
+    layout: HeaderAside,
+    component: Demo2,
+  }
+```
+```
+  {
+    name: '测试',
+    icon: 'folder-o',
+    children: [
+      {
+        name: 'demo1',
+        path: '/demo1',
+        children: [
+          {
+            name: 'demo1',
+            path: '/demo1',
+          },
+          {
+            name: 'demo2',
+            path: '/demo2',
+          },
+        ],
+      }
+    ],
+  }
+```
+page里面的目录结构如下：
+<img src="https://00feng00.github.io/img/ice-add-component.jpg">
+```
+// index.js文件
+import Demo2 from './Demo2'
+export default Demo2
+```
+index.js是暴露文件出口，具体页面逻辑在vue文件实现，如果页面比较复杂，可以把页面分成多个组件进行开发，组件放在components里面
+
 
 
 
