@@ -114,7 +114,7 @@ index.js是暴露文件出口，具体页面逻辑在vue文件实现，如果页
 ```
 ## 后记
   到这里Ice的使用基本就这些了，当然啦，还有一些进阶的操作，大家可以自行研究。
-  最后推荐几个插件，(V-Chart)[https://v-charts.js.org/#/] (D2-crud)[https://github.com/d2-projects/d2-crud]
+  最后推荐几个插件，[V-Chart](https://v-charts.js.org/#/) [D2-crud](https://github.com/d2-projects/d2-crud)
 
 
 
