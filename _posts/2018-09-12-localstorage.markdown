@@ -4,7 +4,7 @@ title:      "JS缓存数据"
 subtitle:   "性能优化"
 date:       2017-07-28 16:55:00
 author:     "ZeFeng"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-js-module.jpg"
 catalog: true
 tags:
     - 缓存
