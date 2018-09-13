@@ -30,5 +30,14 @@ ICE提供了以下这些功能：
 <img src="https://00feng00.github.io/img/iceworker-use-saying-1.jpg">
 <img src="https://00feng00.github.io/img/iceworker-use-saying-2.jpg">
 ## 运行
-安装完成后，在Iceworks里面运行项目，就可以看到类似下面这样的界面：
+安装完成后，在Iceworks里面运行项目，就可以看到类似下面这样的界面：（只是类似，因为还需要修改的）
 <img src="https://00feng00.github.io/img/ice_admin_bg.jpg">
+## 注意
+如果是前端进行开发，个人建议把依赖删掉，然后自己进行安装，步骤如下：
+1、删除node_modules这个文件夹(最好使用命令行删除，不然有可能安装失败，有可能)
+2、执行命令npm install
+这样做的好处，自己对整个项目的结构很清晰，然后就可以按照自己的想法来操作了。
+如果是后端进行开发，个人建议使用Iceworks这个GUI 软件来进行操作。因为一旦遇到问题，解决起来有那么一点点难度（虽然也不难，但是影响开发效率）。
+## 开发
+当你看到项目已经可以跑起来了，肯定已经有一定的信心来进行开发了，下面我们讲如何开发。
+
