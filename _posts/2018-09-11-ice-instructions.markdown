@@ -29,3 +29,6 @@ ICE提供了以下这些功能：
 下载完成后，看下面两个图，进行想对应的操作：
 <img src="https://00feng00.github.io/img/iceworker-use-saying-1.jpg">
 <img src="https://00feng00.github.io/img/iceworker-use-saying-2.jpg">
+## 运行
+安装完成后，在Iceworks里面运行项目，就可以看到类似下面这样的界面：
+<img src="https://00feng00.github.io/img/ice_admin_bg.jpg">
