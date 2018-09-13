@@ -4,7 +4,7 @@ title:        "飞冰使用教程"
 subtitle:     "ice instructions"
 date:         2018-09-11 22:05:00
 author:       "ZeFeng"
-header-img:   "img/post-bg-os-metro.jpg"
+header-img:   "img/ice_header_image.jpg"
 header-mask:  0.3
 catalog:      true
 multilingual: true
@@ -96,8 +96,25 @@ export default Demo2
 ```
 index.js是暴露文件出口，具体页面逻辑在vue文件实现，如果页面比较复杂，可以把页面分成多个组件进行开发，组件放在components里面
 
-
-
+——————————————————————————————————————————————————
+基础的已经讲得差不多了，应该可以进行正常的开发了，最后我们说一下，如果要修改项目的配置，应该怎么操作：
+步骤如下：
+1、如果要使用一些新的插件，可以在main.js引入
+2、找到store文件夹里面的modules里面的d2admin.js，在这里，我们可以把共用的方法放到这里，比如登录，权限管理等。
+3、找到根目录vue.config.js这个文件，我们可以在这个文件配置一些设置
+```
+  // 路径根据自己实际进行修改
+  const baseUrl = '/console/'
+  module.exports = {
+    devServer: {
+      publicPath: baseUrl // 和 baseUrl 保持一致
+    },
+    outputDir: 'E:/d2Admin/dist',
+  }
+```
+## 后记
+  到这里Ice的使用基本就这些了，当然啦，还有一些进阶的操作，大家可以自行研究。
+  最后推荐几个插件，(V-Chart)[https://v-charts.js.org/#/] (D2-crud)[https://github.com/d2-projects/d2-crud]
 
 
 
