@@ -7,11 +7,8 @@ author:       "ZeFeng"
 header-img:   "img/ice_header_image.jpg"
 header-mask:  0.3
 catalog:      true
-multilingual: true
 tags:
-    - 管理后台
-    - VUE
-    - ICE
+    - VUE管理后台
 ---
 
 ## 前言
