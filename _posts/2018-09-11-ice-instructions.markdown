@@ -36,7 +36,7 @@ ICE提供了以下这些功能：
 1、删除node_modules这个文件夹(最好使用命令行删除，不然有可能安装失败，有可能)
 2、执行命令npm install
 这样做的好处，自己对整个项目的结构很清晰，然后就可以按照自己的想法来操作了。
-如果是后端进行开发，个人建议使用Iceworks这个GUI 软件来进行操作。因为一旦遇到问题，解决起来有那么一点点难度（虽然也不难，但是影响开发效率）。
+如果是后端进行开发，个人建议使用Iceworks这个GUI (Graphical User Interface，简称 GUI，又称图形用户接口)来进行操作。因为一旦遇到问题，解决起来有那么一点点难度（虽然也不难，但是影响开发效率）。
 ## 开发
 当你看到项目已经可以跑起来了，肯定已经有一定的信心来进行开发了，下面我们讲如何开发。
 首先第一步，把官方提供的模板的骨架进行小小的修改：
@@ -111,7 +111,7 @@ index.js是暴露文件出口，具体页面逻辑在vue文件实现，如果页
 ```
 ## 后记
   到这里Ice的使用基本就这些了，当然啦，还有一些进阶的操作，大家可以自行研究。
-  最后推荐几个插件，[V-Chart](https://v-charts.js.org/#/) [D2-crud](https://github.com/d2-projects/d2-crud)
+  最后推荐几个插件，[V-Chart](https://v-charts.js.org/#/) [D2-crud](https://github.com/d2-projects/d2-crud) [Icon](https://www.fontawesome.com.cn/faicons/)
 
 
 
