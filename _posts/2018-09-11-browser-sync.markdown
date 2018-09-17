@@ -23,7 +23,7 @@ tags:
 下面开始讲如何使用browser-sync。
 
 ## 安装
-安装方式分为两种，一种是全局安装，一种是本地安装。个人建议使用本地安装。（试了两种安装模式，本地安装更加适合团队）
+安装方式分为两种，一种是全局安装，一种是本地安装。个人建议使用本地安装。（试了两种安装模式，本地安装更加适合团队）<br />
 一、Global Install（全局安装）
 ```
 npm install -g browser-sync
@@ -57,7 +57,7 @@ browser-sync start --server
 browser-sync start --server --files "css/*.css, *.html"
 ```
 ## 注意
-当你完成以上的步骤后。你在浏览器输入http://localhost:3000，看到一直是在加载状态，这是为什么呢。<br />
+当你完成以上的步骤后。你在浏览器输入'http: //localhost:3000'(这里加了个空格是为了避免格式化，你不需要加空格的)会看到一直在加载状态的，这个为什么呢？<br />
 这是因为你的vue.config.js里面baseUrl（基础路径）没有设置好，在打包之前，我们先要确定baseUrl是哪个才可以打包。
 如果只是测试，baseUrl设置为空，或者'/'就可以了。
 
