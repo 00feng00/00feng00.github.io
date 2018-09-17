@@ -4,7 +4,7 @@ title:        "browser-sync使用教程"
 subtitle:     "browser-sync instructions"
 date:         2018-09-16 22:00:00
 author:       "ZeFeng"
-header-img:   "img/post-bg-rwd.jpg"
+header-img:   "img/post-bg-universe.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
