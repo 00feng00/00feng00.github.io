@@ -147,6 +147,8 @@ index.js是暴露文件出口，具体页面逻辑在vue文件实现，如果页
 ## 后记
   到这里Ice的使用基本就这些了，当然啦，还有一些进阶的操作，大家可以自行研究。
   最后推荐几个插件，[V-Chart](https://v-charts.js.org/#/) [D2-crud](https://github.com/d2-projects/d2-crud) [Icon](https://www.fontawesome.com.cn/faicons/)
+  
+  上面写的这些是让大家快速入门ICE D2 Admin,这些知识D2 Admin其中一小块，如果还想了解更多。[D2](https://d2-projects.github.io/d2-admin-doc/zh/learn-guide/)
 
 
 
