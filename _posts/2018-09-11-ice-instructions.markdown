@@ -28,6 +28,41 @@ ICE提供了以下这些功能：<br />
 下载完成后，看下面两个图，进行想对应的操作：
 <img src="https://00feng00.github.io/img/iceworker-use-saying-1.jpg">
 <img src="https://00feng00.github.io/img/iceworker-use-saying-2.jpg">
+然后我们在项目里面可以看到类似以下的文件目录：
+```
+├─ dev
+│  └─ snippets 帮助开发的代码片段
+├─ docs 文档
+├─ public 静态资源
+├─ src
+│  ├─ assets 资源
+│  ├─ components 组件
+│  ├─ i18n 多国语
+│  ├─ layout 布局
+│  ├─ libs 通用库
+│  ├─ menu 菜单
+│  ├─ mock 模拟数据
+│  ├─ pages 页面
+│  ├─ plugin 插件
+│  ├─ router 路由
+│  ├─ store 全局状态
+│  ├─ App.vue
+│  ├─ main.js
+│  └─ setting.js 设置
+├─ tests 单元测试
+├─ .env 环境变量
+├─ .env.development 环境变量 开发环境
+├─ .eslintignore
+├─ .eslintrc.js
+├─ .gitignore
+├─ .postcssrc.js
+├─ LICENSE
+├─ README.md
+├─ babel.config.js
+├─ jest.config.js
+├─ package.json
+└─ vue.config.js 配置文件
+```
 ## 运行
 安装完成后，在Iceworks里面运行项目，就可以看到类似下面这样的界面：（只是类似，因为还需要修改的）
 <img src="https://00feng00.github.io/img/ice_admin_bg.jpg">
