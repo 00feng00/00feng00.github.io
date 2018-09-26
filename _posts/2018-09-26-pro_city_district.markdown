@@ -212,9 +212,9 @@ css代码:<br />
     margin-right: 0.24rem;
   }
 ```
-<br />
+
 js代码<br />
-<br />
+
 ```
 /* 这块是data里面需要的数据参数 */
 data () {
