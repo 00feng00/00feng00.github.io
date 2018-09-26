@@ -13,13 +13,13 @@ tags:
 ---
 
 ## 前言
-    现在省市区选择控件，我们可以搜索到就有很多参考了。我之所以写这篇主要是因为如果想要这个控件更加灵活，体验更加好。（特别是微信端的）
-    先来看下我们这个控件展示效果
-    <img src="https://00feng00.github.io/img/pro_city_dis.jpg">
-    下面开始讲我们这个控件里面的逻辑
+现在省市区选择控件，我们可以搜索到就有很多参考了。我之所以写这篇主要是因为如果想要这个控件更加灵活，体验更加好。（特别是微信端的）<br />
+先来看下我们这个控件展示效果
+<img src="https://00feng00.github.io/img/pro_city_dis.jpg">
+下面开始讲我们这个控件里面的逻辑
 ## 正文
-    我们这个控件是使用VUE来开发的，代码主要包括html、css、js这三块。下面开始讲代码以及逻辑：
-    html代码
+我们这个控件是使用VUE来开发的，代码主要包括html、css、js这三块。下面开始讲代码以及逻辑：<br />
+html代码<br />
 ```
   <section class="myAddress">
     <!-- 省市区三级联动选项 -->
@@ -79,7 +79,9 @@ tags:
     </section>
   </section>
 ```
-css代码:
+
+css代码:<br />
+
 ```
  .myAddress {
    width: 100%;
@@ -209,7 +211,9 @@ css代码:
     margin-right: 0.24rem;
   }
 ```
-js代码
+<br />
+js代码<br />
+<br />
 ```
 /* 这块是data里面需要的数据参数 */
 data () {
