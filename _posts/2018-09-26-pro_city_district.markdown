@@ -503,6 +503,55 @@ data () {
 3、我们拿到数据后，注意是用_filter()这个方法对数据进行过滤。<br />
 4、当我们第一次加载这个控件后，为了防止用户下拉，拖动到body滚动条，我们需要用firstShow()这个方法来处理，体验更好。<br />
 5、为了让体验更好，我们需要对省市区对应的滚动的事件进行处理。ProvinceScroll()、cityChangeScroll()、DistrictChangeScroll()<br />
+6、info这个数据源的格式:<br />
+```
+[
+  {
+    AREA_CODE:"110000",
+    AREA_NAME:"北京市",
+    LV:2,
+    P_AREA_CODE:"100000",
+    RNUM:1,
+    hasNodes:1,
+    id:"110100",
+    index:0,
+    text:"北京市",
+    citys:[
+      {
+        AREA_CODE: "110100", 
+        AREA_NAME: "北京市", 
+        LV: 3, 
+        P_AREA_CODE: "110000", 
+        RNUM: 1, 
+        hasNodes:1,
+        id: "110100",
+        index: 0, 
+        text: "北京市",
+        district:[
+          {
+            AREA_CODE:"110101",
+            AREA_NAME:"东城区",
+            LV:4,
+            P_AREA_CODE:"110100",
+            RNUM:1,
+            hasNodes:0,
+            id:"110101",
+            index:0,
+            text:"东城区"
+          }
+        ],
+      }
+    ],
+  }
+]
+```
+info是一个数组，每个对象里面包含city这个数组，city每个对象里面又包含district这个数组。<br />
+说明一下个别属性的含义：<br />
+1、hasNodes是否有下一级（对象里面是否有数组）<br />
+2、RNUM是当前是第几个（从1开始，省、市、区是分开算的，比如省是从1开始算，市是从1开始，区是从1开始算的。三者是分开的）<br />
+3、index是当前下标是第几个(从0开始，当前数据对象所处的数组的第几个)<br />
+4、LV可用可不用（可以自己根据需求来考虑）<br />
+
 ## 注意
 看完上面的分析，应该对整个控件有了一定的理解了。最后需要注意的两点：<br />
 1、info这个数据，是用来接收后端返回来的数据的。我们需要自己写一个方法来接收后端返回来的数据的。<br />
