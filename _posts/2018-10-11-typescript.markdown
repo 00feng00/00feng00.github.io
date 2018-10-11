@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "TypeScript"
+title:        "TypeScript（ 一 ）"
 subtitle:     "TypeScript is a superset of JavaScript"
 date:         2018-10-11 22:00:00
 author:       "ZeFeng"
@@ -11,7 +11,7 @@ tags:
     - TS
     - React
 ---
-## 推荐一个微信公众号，分享干货的公众号。<br />
+推荐一个微信公众号，分享前端干货的公众号。<br />
 微信搜索：<b>前端大神之路</b><br />
 <img src="https://00feng00.github.io/img/wx_public_channel.jpg">
 <br />
