@@ -183,7 +183,7 @@ webpack允许我们使用通过这种方式写的代码库。 通过我们的设
 ```
 webpack
 ```
-在浏览器里打开index.html，应该已经可以用了！ 你可以看到页面上显示着<br />
+在浏览器里打开index.html，应该已经可以用了！ 你可以看到页面上显示着:<br />
 “Hello from TypeScript and React!”
 
 相信大家对TS已经有一定了解了，可以到官网深入学习TS了。[官网链接](https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter)
