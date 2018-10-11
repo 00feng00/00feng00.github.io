@@ -24,26 +24,33 @@ mkdir myTsProj
 
 cd myTsProj
 ```
+
 接下来创建src文件夹，用来放TS文件。然后在src文件夹里面创建components文件夹，用来放我们自己自定义的组件。
+
 ```
 mkdir src
 cd src
 mkdir components
 cd ..
 ```
+
 Webpack会帮助我们生成dist目录。经webpack处理，会生成bundle.js文件放在dist目录下。<br />
 最后看到的文件如下：<br />
+
 ```
 proj/
 ├─dist/
 └─ src/   
   └─components/
 ```
+
 ## 初始化工程
 安装,使用默认值就可以了。也可以在生成的 package.json文件里修改。
-``
+
+```
 npm init
 ```
+
 ## 安装依赖
 1、要确保我们有安装webpack,如果没有安装，执行下面的命令：<br />
 ```
