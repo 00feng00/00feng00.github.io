@@ -18,19 +18,19 @@ tags:
 <br />
 ## 前言
  TypeScript是由微软开发的自由和开源的编程语言。TypeScript是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。
-### 一、快速入门TS
+## 一、快速入门TS
 <b>说明：</b>
 TS使用方式有两种，一种是从头搭建项目的时候使用TS，另外一种是在已有的项目使用TS。对TS使用不是很熟悉的同学，建议从头搭建使用，这样遇到的坑会相对少很多。
-#### 搭建TypeScript
-安装TS有两种方式： 1、通过npm（Node.js包管理器） 2、安装Visual Studio的TypeScript插件，默认是有TS的，如果你的Visual Studio没有安装TS，[下载地址]( 
-https://www.tslang.cn/#download-links)
-#### npm 安装
+## 搭建TypeScript
+安装TS有两种方式： 1、通过npm（Node.js包管理器） 2、安装Visual Studio的TypeScript插件，默认是有TS的，如果你的Visual Studio没有安装TS，
+[下载地址](https://www.tslang.cn/#download-links)
+## 1、npm 安装
 ```
 npm install -g typescript
 ```
-#### 准备工作：
+## 2、准备工作：
 
-1、新建demo.ts文件，文件里面写以下代码：
+1）、新建demo.ts文件，文件里面写以下代码：
 
 ```
 function demo (person) {
@@ -40,7 +40,7 @@ let user = "前端 大神之路";
 document.body.innerHTML = demo(user);
 ```
 可以看到虽然我们使用了.ts拓展名，但是上面的代码只是js而已。
-2、使用命令行，运行TypeScript编译器：
+2）、使用命令行，运行TypeScript编译器：
 ```
 tsc demo.ts
 ```
@@ -71,7 +71,7 @@ demo.ts(7,26): error TS2345: Argument of type 'number[]' is not assignable to pa
 ```
 同样的，如果不传person这个参数，TS会告诉你使用了非期望个数的参数调用了这个函数。可以知道TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。
 （Tip: 尽管报错了，demo.js还是被创建了，所以就算你代码有错误，还是可以使用TS的，只是TS会警告你代码可能不会按预期执行）
-#### 接口
+## 3、接口
 我们接着上面的例子进行拓展，讲一下接口。
 ```
 interface Person {
@@ -88,7 +88,7 @@ document.body.innerHTML = demo(user);
 
 （当两个类型内部的结构兼容那么这两个类型也就是兼容的。 因此这也就是允许我们在实现接口时候只要保证包含了接口要求的结构就可以，而不必明确地使用 implements语句。）
 
-#### 类
+## 4、类
 我们继续改写上面的例子，我们使用类来改写：
 ```
 class name { 
