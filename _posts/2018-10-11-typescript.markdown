@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "TypeScript（ 一 ）"
+title:        "TypeScript（ 入门 ）"
 subtitle:     "TypeScript is a superset of JavaScript"
 date:         2018-10-08 22:00:00
 author:       "ZeFeng"
