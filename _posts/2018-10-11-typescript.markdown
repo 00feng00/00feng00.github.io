@@ -2,7 +2,7 @@
 layout:       post
 title:        "TypeScript（ 一 ）"
 subtitle:     "TypeScript is a superset of JavaScript"
-date:         2018-10-11 22:00:00
+date:         2018-10-08 22:00:00
 author:       "ZeFeng"
 header-img:   "img/TS.jpg"
 header-mask:  0.3
