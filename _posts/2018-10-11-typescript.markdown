@@ -14,15 +14,15 @@ tags:
 微信搜索：<b>前端大神之路</b><br />
 <img src="https://00feng00.github.io/img/wx_public_channel.jpg">
 <br />
-## 前言<br />
+## 前言
  TypeScript是由微软开发的自由和开源的编程语言。TypeScript是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。
-## 一、快速入门TS<br />
+## 正文 快速入门TS
 <b>说明：</b><br />
 TS使用方式有两种，一种是从头搭建项目的时候使用TS，另外一种是在已有的项目使用TS。对TS使用不是很熟悉的同学，建议从头搭建使用，这样遇到的坑会相对少很多。
-## 搭建TypeScript<br />
+## 搭建TypeScript
 安装TS有两种方式：<br />
-1、通过npm（Node.js包管理器）<br />
-2、安装Visual Studio的TypeScript插件，默认是有TS的，如果你的Visual Studio没有安装TS，
+1）、通过npm（Node.js包管理器）<br />
+2）、安装Visual Studio的TypeScript插件，默认是有TS的，如果你的Visual Studio没有安装TS，
 [下载地址](https://www.tslang.cn/#download-links) <br />
 ## 1、npm 安装
 ```
@@ -55,7 +55,7 @@ document.body.innerHTML = demo(user);
 ```
 可以看到，我们给 person函数的参数添加: string类型注解，这个有什么用呢，下面会继续讲到。
 
-####类型注解
+## 类型注解
 TS类型注解是一种轻量级的为函数或变量添加约束的方式。举个例子，上面的例子我们可以看到demo函数接收一个字符串参数,如果我们把user 改成数组会发生什么？
 
 ```
@@ -109,9 +109,9 @@ document.body.innerHTML = demo(user);
 ```
  通过代码我们可以看到，TS是支持JS基于类的面向对象编程这个新特性，当然啦，其他新特性也是支持的。<br />
  name带有一个构造函数和一些公共字段。 (注意: 类和接口可以一起使用的，我们可以自行决定抽象的级别。)<br />
-  构造函数的参数上使用public等同于创建了同名的成员变量。<br />
-  重新运行tsc demo.ts，你会看到生成的JavaScript代码和原先的一样。<br />
-  TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。
+ 构造函数的参数上使用public等同于创建了同名的成员变量。<br />
+ 重新运行tsc demo.ts，你会看到生成的JavaScript代码和原先的一样。<br />
+ TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。
 
 
 
