@@ -112,9 +112,7 @@ document.body.innerHTML = demo(user);
  构造函数的参数上使用public等同于创建了同名的成员变量。<br />
  重新运行tsc demo.ts，你会看到生成的JavaScript代码和原先的一样。<br />
  TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。<br />
-<br />
-Tips<br />
-<img src="https://00feng00.github.io/img/pay_me_money.jpg">
+
 
 
 
