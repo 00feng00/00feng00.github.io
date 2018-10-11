@@ -187,3 +187,7 @@ webpack
 “Hello from TypeScript and React!”
 
 相信大家对TS已经有一定了解了，可以到官网深入学习TS了。[官网链接](https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter)
+
+<br />
+Reward<br />
+<img src="https://00feng00.github.io/img/pay_me_money.jpg">
