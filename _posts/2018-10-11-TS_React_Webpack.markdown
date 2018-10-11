@@ -59,9 +59,7 @@ npm install -g webpack
 Webpack可以将所有代码和可选择地将依赖捆绑成一个单独的.js文件,如果还不了解Webpack，[可以看这里](https://www.webpackjs.com/concepts/)<br />
 2、接着添加React和React-DOM以及它们的声明文件到package.json文件里做为依赖，执行下面命令：
 ```
-npm install 
---
-save react react-dom @types/react @types/react-dom
+npm install --save react react-dom @types/react @types/react-dom
 ```
 （说明： 这个命令使用@types/前缀表示要额外获取React和React-DOM的声明文件。 通常导入像 "react"这样的路径，它会查看react包； 然而，并不是所有的包都包含了声明文件，所以TS还会查看 @types/react包。 之后将不必在意这些了。）<br />
 3、最后，我们要添加开发时依赖awesome-typescript-loader和source-map-loader。<br />
