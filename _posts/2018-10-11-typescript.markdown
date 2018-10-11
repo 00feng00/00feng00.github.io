@@ -12,7 +12,7 @@ tags:
     - React
 ---
 ## 推荐一个微信公众号，分享干货的公众号。<br />
-微信搜索：<b>前端大神之路</b>
+微信搜索：<b>前端大神之路</b><br />
 <img src="https://00feng00.github.io/img/wx_public_channel.jpg">
 <br />
 ## 前言<br />
@@ -21,7 +21,9 @@ tags:
 <b>说明：</b><br />
 TS使用方式有两种，一种是从头搭建项目的时候使用TS，另外一种是在已有的项目使用TS。对TS使用不是很熟悉的同学，建议从头搭建使用，这样遇到的坑会相对少很多。
 ## 搭建TypeScript<br />
-安装TS有两种方式： 1、通过npm（Node.js包管理器） 2、安装Visual Studio的TypeScript插件，默认是有TS的，如果你的Visual Studio没有安装TS，
+安装TS有两种方式：<br />
+1、通过npm（Node.js包管理器）<br />
+2、安装Visual Studio的TypeScript插件，默认是有TS的，如果你的Visual Studio没有安装TS，
 [下载地址](https://www.tslang.cn/#download-links) <br />
 ## 1、npm 安装
 ```
@@ -43,7 +45,7 @@ document.body.innerHTML = demo(user);
 ```
 tsc demo.ts
 ```
-结果输出为一个demo.js文件，它包含了和输入文件中相同的JavsScript代码。 
+结果输出为一个demo.js文件，它包含了和输入文件中相同的JavsScript代码。 <br />
 下面我们开始使用TS的功能：
 ```
 function demo (person: string) {
@@ -68,7 +70,7 @@ document.body.innerHTML = demo(user);
 ```
 demo.ts(7,26): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
 ```
-同样的，如果不传person这个参数，TS会告诉你使用了非期望个数的参数调用了这个函数。可以知道TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。
+同样的，如果不传person这个参数，TS会告诉你使用了非期望个数的参数调用了这个函数。可以知道TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。<br />
 （Tip: 尽管报错了，demo.js还是被创建了，所以就算你代码有错误，还是可以使用TS的，只是TS会警告你代码可能不会按预期执行）
 ## 3、接口
 我们接着上面的例子进行拓展，讲一下接口。
@@ -106,10 +108,11 @@ function demo (person: Person) {
 let user = { firstName: "前端大神", lastName: "之路"};
 document.body.innerHTML = demo(user);
 ```
- 通过代码我们可以看到，TS是支持JS基于类的面向对象编程这个新特性，当然啦，其他新特性也是支持的。
- name带有一个构造函数和一些公共字段。 (注意: 类和接口可以一起使用的，我们可以自行决定抽象的级别。)
-  构造函数的参数上使用public等同于创建了同名的成员变量。
-  重新运行tsc demo.ts，你会看到生成的JavaScript代码和原先的一样。 TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。
+ 通过代码我们可以看到，TS是支持JS基于类的面向对象编程这个新特性，当然啦，其他新特性也是支持的。<br />
+ name带有一个构造函数和一些公共字段。 (注意: 类和接口可以一起使用的，我们可以自行决定抽象的级别。)<br />
+  构造函数的参数上使用public等同于创建了同名的成员变量。<br />
+  重新运行tsc demo.ts，你会看到生成的JavaScript代码和原先的一样。<br />
+  TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。
 
 
 
