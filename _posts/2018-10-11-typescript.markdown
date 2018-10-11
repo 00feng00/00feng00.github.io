@@ -8,8 +8,7 @@ header-img:   "img/TS.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
-    - TS
-    - React
+    - TypeScript
 ---
 推荐一个微信公众号，分享前端干货的公众号。<br />
 微信搜索：<b>前端大神之路</b><br />
