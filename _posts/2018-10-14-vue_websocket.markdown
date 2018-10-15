@@ -34,7 +34,7 @@ registry.addEndpoint("/coordination").withSockJS();
 ```
 ## 代码实现
 <b>服务端：</b><br />
-可以到github看代码[SockJS-node server](github链接https://github.com/sockjs/sockjs-node)<br />
+可以到github看代码 [SockJS-node server](github链接https://github.com/sockjs/sockjs-node) <br />
 <b>客户端：</b><br />
 1、安装stompjs<br />
 ```
