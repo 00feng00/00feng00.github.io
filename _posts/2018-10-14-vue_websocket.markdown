@@ -16,6 +16,7 @@ tags:
 
 ## 前言
 SockJS实现webSocket通信有很多例子，比如用jq实现的，也有用vue实现的。这里我们主要讲vue的例子。我们先用一个图简单了解一下轮询跟WebSocket。
+<img src="https://00feng00.github.io/img/ws.png">
 ## 简介
 <b>WebSocket:</b>
 WebSocket 是 HTML5 开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。<br />
