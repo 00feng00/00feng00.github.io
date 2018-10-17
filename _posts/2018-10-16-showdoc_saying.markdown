@@ -50,7 +50,7 @@ API文档
 用一张图来说下ShowDoc的一些特点：<br />
 <img src="https://00feng00.github.io/img/showdoc-goodPoint.jpg">
 这里在讲下ShowDoc的几个比较好用的功能：<br />
-1、ShowDoc里面的文档可以可将项目文档分享到电脑或移动设备查看<br />
+1、ShowDoc里面的文档可以可将项目文档分享到电脑或移动设备查看，也可以离线看文档<br />
 2、ShowDoc可以进行密码验证，文档不会外流。<br />
 3、创建者可以把项目转让给团队的其他人员，也可以添加、删除项目成员。<br />
 4、markdown编辑<br />
