@@ -4,7 +4,7 @@ title:        "showdoc saying"
 subtitle:     "showdoc instructions"
 date:         2018-10-16 22:05:00
 author:       "ZeFeng"
-header-img:   "img/ice_header_image.jpg"
+header-img:   "img/ems_company_logo.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
