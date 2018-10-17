@@ -19,8 +19,8 @@ tags:
 1、二次开发沟通成本大<br />
 2、文档不能留底，定位问题花费时间多<br />
 3、不利于团队协作<br />
-txt或者world不是一个很好的选择。我有一个感觉，我们团队走的方向应该会趋向专业化。为了让我们的团队开发更加高效，同时减少我们的沟通成本，加快团队之间沟通的效率
-个人觉得应该需要作出一些调整。
+&nbsp;&nbsp;txt或者world不是一个很好的选择。我有一个感觉，我们团队走的方向应该会趋向专业化。为了让我们的团队开发更加高效，同时减少我们的沟通成本，加快团队之间沟通的效率<br />
+&nbsp;&nbsp;个人觉得应该需要作出一些调整。
 
 ## 产品选型
 &nbsp;&nbsp;我对比了几个产品，showdoc应该是比较适合我们团队的。基于以下几点考虑：<br />
@@ -33,12 +33,12 @@ txt或者world不是一个很好的选择。我有一个感觉，我们团队走
 使用ShowDoc有几个好处：<br />
 1、后端开发的数据设计有提高，在开发之前要先定下开发的数据结构，对数据处理更加容易把握。<br />
 2、对测试人员有一个很大的帮助，对职业生涯都有一个很大的提升。这里详细讲下，有了这个，测试人员就可以进行接口测试了，进而自动化也就是下一步的目标了。<br />
-这里介绍三个测试的东东<br />
-1)、 [mocha](https://m.aliyun.com/jiaocheng/topic_75092_1.html) <br />
-2)、 [karma](http://karma-runner.github.io/2.0/index.html) <br />
-3)、 [ava](http://i5ting.github.io/ava-practice/) <br />
-3、对前端更加友好，你懂的<br />
-4、加快团队之间沟通的效率<br />
+&nbsp;&nbsp;&nbsp;&nbsp;这里介绍三个测试的东东<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1)、 [mocha](https://m.aliyun.com/jiaocheng/topic_75092_1.html) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;2)、 [karma](http://karma-runner.github.io/2.0/index.html) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;3)、 [ava](http://i5ting.github.io/ava-practice/) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;3、对前端更加友好，你懂的<br />
+&nbsp;&nbsp;&nbsp;&nbsp;4、加快团队之间沟通的效率<br />
 
 ## 展示
 API文档
@@ -47,15 +47,15 @@ API文档
 <img src="https://00feng00.github.io/img/showdoc_data-saying.jpg">
 
 ## ShowDoc使用手册
-用一张图来说下ShowDoc的一些特点：
+用一张图来说下ShowDoc的一些特点：<br />
 <img src="https://00feng00.github.io/img/showdoc-goodPoint.jpg">
-这里在讲下ShowDoc的几个比较好用的功能：
-1、ShowDoc里面的文档可以可将项目文档分享到电脑或移动设备查看
-2、ShowDoc可以进行密码验证，文档不会外流。
-3、创建者可以把项目转让给团队的其他人员，也可以添加、删除项目成员。
-4、markdown编辑
-5、模板插入（效率高）
-6、历史版本功能，把页面恢复到之前的版本。
+这里在讲下ShowDoc的几个比较好用的功能：<br />
+1、ShowDoc里面的文档可以可将项目文档分享到电脑或移动设备查看<br />
+2、ShowDoc可以进行密码验证，文档不会外流。<br />
+3、创建者可以把项目转让给团队的其他人员，也可以添加、删除项目成员。<br />
+4、markdown编辑<br />
+5、模板插入（效率高）<br />
+6、历史版本功能，把页面恢复到之前的版本。<br />
 
 ## 安装到自己服务器
 [安装手册](https://www.showdoc.cc/help?page_id=13732)
