@@ -33,12 +33,12 @@ tags:
 使用ShowDoc有几个好处：<br />
 1、后端开发的数据设计有提高，在开发之前要先定下开发的数据结构，对数据处理更加容易把握。<br />
 2、对测试人员有一个很大的帮助，对职业生涯都有一个很大的提升。这里详细讲下，有了这个，测试人员就可以进行接口测试了，进而自动化也就是下一步的目标了。<br />
-&nbsp;&nbsp;&nbsp;&nbsp;这里介绍三个测试的东东<br />
+&nbsp;&nbsp;&nbsp;&nbsp;这里介绍三个测试的东东,最后的目标都是指向自动化测试<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1)、 [mocha](https://m.aliyun.com/jiaocheng/topic_75092_1.html) <br />
 &nbsp;&nbsp;&nbsp;&nbsp;2)、 [karma](http://karma-runner.github.io/2.0/index.html) <br />
 &nbsp;&nbsp;&nbsp;&nbsp;3)、 [ava](http://i5ting.github.io/ava-practice/) <br />
-&nbsp;&nbsp;&nbsp;&nbsp;3、对前端更加友好，你懂的<br />
-&nbsp;&nbsp;&nbsp;&nbsp;4、加快团队之间沟通的效率<br />
+3、对前端更加友好，你懂的<br />
+4、加快团队之间沟通的效率<br />
 
 ## 展示
 API文档
