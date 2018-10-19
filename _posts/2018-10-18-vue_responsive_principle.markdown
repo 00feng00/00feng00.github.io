@@ -4,7 +4,7 @@ title:        "Vue响应式原理"
 subtitle:     "vue responsive principle"
 date:         2018-10-18 22:05:00
 author:       "ZeFeng"
-header-img:   "img/ice_header_image.jpg"
+header-img:   "img/vue-responsive-principle-logo.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
