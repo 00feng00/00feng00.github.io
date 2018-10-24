@@ -4,7 +4,7 @@ title:        "前端打工仔的打怪升级之路"
 subtitle:     "本故事纯属虚构 如有相似，纯属雷同"
 date:         2018-10-23 22:05:00
 author:       "ZeFeng"
-header-img:   "img/experience_bg.jpg"
+header-img:   "img/zefeng_photo_images.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
