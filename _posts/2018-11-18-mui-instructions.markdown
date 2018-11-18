@@ -91,6 +91,7 @@ UI 列表：<br/>
 
 最后有个需要注意的一点：<br/>
 mui为简化开发，将plusReady事件封装成了mui.plusReady()方法，凡涉及到HTML5+的api，建议都写在mui.plusReady方法中；<br/>
+否则可能会报“plus is not defined”的错误；<br/>
 
 
 
