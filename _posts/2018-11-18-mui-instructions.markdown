@@ -155,7 +155,14 @@ document.getElementById('onScale').addEventListener('tap', function() {
 通过这种方式，如果在邮我行上发布的项目，要调用手机的API，我们就需要使用这种方式来实现。<br/>
 如果是通过mui打包发行的我们直接使用mui提供的API就可以了，不需要调用邮我行的API。<br/>
 
-
+## Mui 讲解
+&nbsp;&nbsp;&nbsp;&nbsp;通过扫描上面的UI二维码，我们可以看到MUI的UI控件是很齐全的，基本市面上有的，它基本都有。<br/>
+UI控件的使用，这里就不额外讲解了，把文档的Demo拉下来就能看到效果了。<br/>
+Mui提供了以下调用手机API的接口，看图：
+<img src="https://00feng00.github.io/img/mui-interface-01.png">
+<img src="https://00feng00.github.io/img/mui-interface-02.png">
+<img src="https://00feng00.github.io/img/mui-interface-03.png">
+<img src="https://00feng00.github.io/img/mui-interface-04.png">
 
 
 
