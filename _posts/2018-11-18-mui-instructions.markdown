@@ -4,7 +4,7 @@ title:        "MUI使用教程"
 subtitle:     "mui instructions"
 date:         2018-11-18 10:05:00
 author:       "ZeFeng"
-header-img:   "img/ice_header_image.jpg"
+header-img:   "img/home-bg-o.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
