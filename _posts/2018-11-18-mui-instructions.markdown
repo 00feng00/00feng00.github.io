@@ -105,6 +105,8 @@ mui为了解决这个问题，定义了如下css代码：<br/>
 mui为简化开发，将plusReady事件封装成了mui.plusReady()方法，凡涉及到HTML5+的api，建议都写在mui.plusReady方法中；<br/>
 否则可能会报“plus is not defined”的错误；<br/>
 
+## 安装开发工具
+&nbsp;&nbsp;&nbsp;&nbsp;我发在群里的包就可以直接使用了，它运行时的占用内存比普元那套少了将近5倍。
 
 ## 正文
 &nbsp;&nbsp;&nbsp;&nbsp;上面讲解了技术框架丶注意事项。下面我们开始进行详细的讲解。
