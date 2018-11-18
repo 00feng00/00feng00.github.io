@@ -109,12 +109,12 @@ Demo:<br/>
     <div id="container" width="100%" height="100%" layout="VBox" hAlign="center" vAlign="middle" >
         <webview id="webview" width="100%" height="100%" />
     </div>
-	$M.page.addEvent('onLoad', function(params){
-		// 设置网络URL
-		webview.setUrl("http://172.20.10.6:8848/test/login.html?111");
-	});
+    $M.page.addEvent('onLoad', function(params){
+	// 设置网络URL
+	webview.setUrl("http://172.20.10.6:8848/test/login.html?111");
+    });
     // 设置状态栏颜色
-	Utils.setStatusBarStyle('default');
+    Utils.setStatusBarStyle('default');
 ```
 代码分析：<br/>
 我们使用了webview组件，通过设置url,就可以访问我们的应用。<br/>
@@ -124,20 +124,20 @@ Demo:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;看到上面的代码，可能有的同事可以会问，那在邮我行发布，我们使用H5开发，怎么调用手机里面的Api呢。下面举个例子：<br/>
 html:<br/>
 ```
-			<div class="mui-page-content">
-				<p id="scaleText">扫一扫后结果内容显示</p>
-				<button id="onScale" onclick="getScaleData()" type="button" class="mui-btn mui-btn-green">扫一扫</button>
-			</div>
+    <div class="mui-page-content">
+	<p id="scaleText">扫一扫后结果内容显示</p>
+	<button id="onScale" onclick="getScaleData()" type="button" class="mui-btn mui-btn-green">扫一扫</button>
+    </div>
 ```
 js:<br/>
 ```
-		function getScaleData () {
-			// 调用邮我行的提供的API扫一扫
-			Emp.execute("Utils.startBarCodeScanner(function(val){webview.execute('setPhTML(\"'+val+'\")')})");
-		}
-        function setPhTML (val) {
-			scaleText.innerHTML = val;
-		}
+    function getScaleData () {
+	// 调用邮我行的提供的API扫一扫
+	Emp.execute("Utils.startBarCodeScanner(function(val){webview.execute('setPhTML(\"'+val+'\")')})");
+    }
+    function setPhTML (val) {
+      scaleText.innerHTML = val;
+    }
 ```
 代码分析：<br/>
 在页面写了个按钮和一个显示扫一扫后的结果显示文本。<br/>
