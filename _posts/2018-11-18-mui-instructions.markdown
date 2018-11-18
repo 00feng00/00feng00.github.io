@@ -143,27 +143,28 @@ js:<br/>
 在页面写了个按钮和一个显示扫一扫后的结果显示文本。<br/>
 通过按钮调用邮我行提供的扫一扫API，然后在扫完后调用H5页面的方法，把值设置到H5页面用来显示文本的地方就可以了。<br/>
 <br/>
-温馨提示：
-上面的例子，我使用了onclick方法，调用事件，这里是给个反面的例子，尽量不要使用click,上面的注意事项也已经讲了。
-所以我们的代码要这样写：
+温馨提示：<br/>
+上面的例子，我使用了onclick方法，调用事件，这里是给个反面的例子，尽量不要使用click,上面的注意事项也已经讲了。<br/>
+所以我们的代码要这样写：<br/>
 ```
 document.getElementById('onScale').addEventListener('tap', function() {
     Emp.execute("Utils.startBarCodeScanner(function(val){webview.execute('setPhTML(\"'+val+'\")')})");
 })
 ```
-
+<br/>
 通过这种方式，如果在邮我行上发布的项目，要调用手机的API，我们就需要使用这种方式来实现。<br/>
 如果是通过mui打包发行的我们直接使用mui提供的API就可以了，不需要调用邮我行的API。<br/>
 
 ## Mui 讲解
 &nbsp;&nbsp;&nbsp;&nbsp;通过扫描上面的UI二维码，我们可以看到MUI的UI控件是很齐全的，基本市面上有的，它基本都有。<br/>
 UI控件的使用，这里就不额外讲解了，把文档的Demo拉下来就能看到效果了。<br/>
-Mui提供了以下调用手机API的接口，看图：
+Mui提供了以下调用手机API的接口，看图：<br/>
+<br/>
 <img src="https://00feng00.github.io/img/mui-interface-01.png">
 <img src="https://00feng00.github.io/img/mui-interface-02.png">
 <img src="https://00feng00.github.io/img/mui-interface-03.png">
 <img src="https://00feng00.github.io/img/mui-interface-04.png">
-
+<br/>
 
 
 
