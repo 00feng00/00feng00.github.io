@@ -28,4 +28,12 @@ H5的技术栈有好几种，这里个人推荐使用VUE，因为后面的更新
 &nbsp;&nbsp;我们使用H5+APP这套来开发，然后我们可以发布Android丶IOS的APP应用。<br/>
 (MUI后面我们会讲很详细的)<br/>
 三丶服务端<br/>
-&nbsp;&nbsp;服务端我们使用JAVA，这里需要注意一点，后端开发人员要处理允许跨域调用，而且要允许option的访问，对option进行过滤。
+&nbsp;&nbsp;服务端我们使用JAVA，这里需要注意一点，后端开发人员要处理允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
+
+## 体验
+&nbsp;&nbsp;从上面的架构分析，我们可以很清晰的看到，我们是使用H5来开发的。<br/>
+MUI UI 控件:<br/>
+<img src="https://00feng00.github.io/img/mui-code-m.png">
+体验版：<br/>
+可以体验我写出来的Demo,里面有一个调用生产的demo,调用用户登录查询接口。<br/>
+后端开发人员需要注意一点：允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
