@@ -13,7 +13,7 @@ tags:
 
 ## 架构分析
 技术栈架构图:<br/>
-<img src="https://00feng00.github.io/img/mui-architecture.png">
+<img src="https://00feng00.github.io/img/mui-architecture.png"><br/>
 项目架构分为三个部分：<br/>
 1)客户端：在邮我行发布APP<br/>
 2)客户端：发布IOS/Android的APP<br/>
