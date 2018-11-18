@@ -54,8 +54,11 @@ UI 列表：<br/>
 顶部导航栏（.mui-bar-nav）、底部工具条(.mui-bar-footer)、底部选项卡（.mui-bar-tab）;<br/>
 这些元素使用时需遵循一个规则：<br/>
 放在.mui-content元素之前，即使是底部工具条和底部选项卡，也要放在.mui-content之前，否则固定栏会遮住部分主内容；<br/>
+<br/>
 2丶一切内容都要包裹在mui-content中<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;除了固定栏之外，其它内容都要包裹在.mui-content中，否则就有可能被固定栏遮罩，原因：固定栏基于Fixed定位，不受流式布局限制，普通内容依然会从top:0的位置开始布局，这样就会被固定栏遮罩，mui为了解决这个问题，定义了如下css代码：
+&nbsp;&nbsp;&nbsp;&nbsp;除了固定栏之外，其它内容都要包裹在.mui-content中，否则就有可能被固定栏遮罩。<br/>
+原因：固定栏基于Fixed定位，不受流式布局限制，普通内容依然会从top:0的位置开始布局，这样就会被固定栏遮罩。<br/>
+mui为了解决这个问题，定义了如下css代码：<br/>
 ```
     .mui-bar-nav ~ .mui-content {
         padding-top: 44px;
@@ -68,7 +71,7 @@ UI 列表：<br/>
     }
 ```
 当然拉，这个是H5开发，所以也可以自定义样式。everything is ok。<br/>
-
+<br/>
 3丶始终为button按钮添加type属性<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;如果button按钮没有type属性，浏览器默认按照type=submit逻辑处理，这样若将没有type的button放在form表单中，点击按钮就会执行form表单提交，页面就会刷新，用户体验极差。
 
