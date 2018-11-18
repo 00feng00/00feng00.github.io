@@ -37,6 +37,7 @@ H5的技术栈有好几种，这里个人推荐使用VUE，因为后面的更新
 &nbsp;&nbsp;从上面的架构分析，我们可以很清晰的看到，我们是使用H5来开发的。<br/>
 MUI UI 控件:<br/>
 <img src="https://00feng00.github.io/img/mui-code-m.png"> <br/>
+<br/>
 UI 列表：<br/>
 <img src="https://00feng00.github.io/img/mui-ui-01.png">
 <img src="https://00feng00.github.io/img/mui-ui-02.png">
@@ -96,6 +97,72 @@ UI 列表：<br/>
 mui为简化开发，将plusReady事件封装成了mui.plusReady()方法，凡涉及到HTML5+的api，建议都写在mui.plusReady方法中；<br/>
 否则可能会报“plus is not defined”的错误；<br/>
 
+
+## 正文
+&nbsp;&nbsp;&nbsp;&nbsp;上面讲解了技术框架丶注意事项。下面我们开始进行详细的讲解。
+
+## 使用webview
+&nbsp;&nbsp;&nbsp;&nbsp;在邮我行发布项目，我们要基于H5来开发，所以使用webview。<br/>
+Demo:<br/>
+
+```
+    <div id="container" width="100%" height="100%" layout="VBox" hAlign="center" vAlign="middle" >
+        <webview id="webview" width="100%" height="100%" />
+    </div>
+	$M.page.addEvent('onLoad', function(params){
+		// 设置网络URL
+		webview.setUrl("http://172.20.10.6:8848/test/login.html?111");
+	});
+    // 设置状态栏颜色
+	Utils.setStatusBarStyle('default');
+```
+代码分析：<br/>
+我们使用了webview组件，通过设置url,就可以访问我们的应用。<br/>
+可以自行通过setStatusBarStyle设置状态栏的颜色,有两种模式default/light<br/>
+
+## 答疑
+&nbsp;&nbsp;&nbsp;&nbsp;看到上面的代码，可能有的同事可以会问，那在邮我行发布，我们使用H5开发，怎么调用手机里面的Api呢。下面举个例子：<br/>
+html:<br/>
+```
+			<div class="mui-page-content">
+				<p id="scaleText">扫一扫后结果内容显示</p>
+				<button id="onScale" onclick="getScaleData()" type="button" class="mui-btn mui-btn-green">扫一扫</button>
+			</div>
+```
+js:<br/>
+```
+		function getScaleData () {
+			// 调用邮我行的提供的API扫一扫
+			Emp.execute("Utils.startBarCodeScanner(function(val){webview.execute('setPhTML(\"'+val+'\")')})");
+		}
+        function setPhTML (val) {
+			scaleText.innerHTML = val;
+		}
+```
+代码分析：<br/>
+在页面写了个按钮和一个显示扫一扫后的结果显示文本。<br/>
+通过按钮调用邮我行提供的扫一扫API，然后在扫完后调用H5页面的方法，把值设置到H5页面用来显示文本的地方就可以了。<br/>
+<br/>
+温馨提示：
+上面的例子，我使用了onclick方法，调用事件，这里是给个反面的例子，尽量不要使用click,上面的注意事项也已经讲了。
+所以我们的代码要这样写：
+```
+document.getElementById('onScale').addEventListener('tap', function() {
+    Emp.execute("Utils.startBarCodeScanner(function(val){webview.execute('setPhTML(\"'+val+'\")')})");
+})
+```
+
+通过这种方式，如果在邮我行上发布的项目，要调用手机的API，我们就需要使用这种方式来实现。<br/>
+如果是通过mui打包发行的我们直接使用mui提供的API就可以了，不需要调用邮我行的API。<br/>
+
+
+
+
+
+
+## 结语
+文末，个人建议：减少css二次渲染，就是少用复杂的选择器，少用padding、margin这些会二次修正页面的css。
+如果追求极致的话，那jquery、zepto这些框架也不要使用，手机上都是webkit引擎，直接写document的api操作dom即没有兼容问题又没有效率问题。
 
 
 
