@@ -21,7 +21,7 @@ tags:
 <br/>
 具体分析：<br/>
 一丶在邮我行发布APP<br/>
-&nbsp;&nbsp;基于普元的壳子，我们使用webview，这样就可以使用Mui来开发我们的APP应用。（具体的代码后面会具体分析）<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;基于普元的壳子，我们使用webview，这样就可以使用Mui来开发我们的APP应用。（具体的代码后面会具体分析）<br/>
 有了H5开发，所以，我们一套代码就可以在微信丶支付宝丶邮我行丶Android丶IOS上运行了。<br/>
 H5的技术栈有好几种，这里个人推荐使用VUE，因为后面的更新迭代，我们可能会使用MUI最新的一套uni-app，它是基于Vue的，为了之后修改少部分的代码就可以更新迭代。之所以现在还不使用这套uni-app，因为它目前发布了小程序丶APP，还没有发布H5版本的，后面会发布的。<br/>
 （额外的一点VUE3.0国内将在11.24发布，more faster more easier）<br/>
@@ -31,10 +31,10 @@ H5的技术栈有好几种，这里个人推荐使用VUE，因为后面的更新
 (MUI后面我们会讲很详细的)<br/>
 <br/>
 三丶服务端<br/>
-&nbsp;&nbsp;服务端我们使用JAVA，这里需要注意一点，后端开发人员要处理允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;服务端我们使用JAVA，这里需要注意一点，后端开发人员要处理允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
 <br/>
 ## 体验
-&nbsp;&nbsp;从上面的架构分析，我们可以很清晰的看到，我们是使用H5来开发的。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;从上面的架构分析，我们可以很清晰的看到，我们是使用H5来开发的。<br/>
 MUI UI 控件:<br/>
 <img src="https://00feng00.github.io/img/mui-code-m.png"> <br/>
 <br/>
@@ -47,13 +47,13 @@ UI 列表：<br/>
 后端开发人员需要注意一点：允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
 
 ## 注意事项
-在讲解代码之前，我们要注意几个点：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;在讲解代码之前，我们要注意几个点：<br/>
 1丶固定栏靠前<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;固定栏，就是带有.mui-bar属性的节点，都是基于fixed定位的元素；<br/>
 常见组件包括：<br/>
-顶部导航栏（.mui-bar-nav）、底部工具条(.mui-bar-footer)、底部选项卡（.mui-bar-tab）;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;顶部导航栏（.mui-bar-nav）、底部工具条(.mui-bar-footer)、底部选项卡（.mui-bar-tab）;<br/>
 这些元素使用时需遵循一个规则：<br/>
-放在.mui-content元素之前，即使是底部工具条和底部选项卡，也要放在.mui-content之前，否则固定栏会遮住部分主内容；<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;放在.mui-content元素之前，即使是底部工具条和底部选项卡，也要放在.mui-content之前，否则固定栏会遮住部分主内容；<br/>
 <br/>
 2丶一切内容都要包裹在mui-content中<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;除了固定栏之外，其它内容都要包裹在.mui-content中，否则就有可能被固定栏遮罩。<br/>
@@ -143,11 +143,11 @@ js:<br/>
     }
 ```
 代码分析：<br/>
-在页面写了个按钮和一个显示扫一扫后的结果显示文本。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;在页面写了个按钮和一个显示扫一扫后的结果显示文本。<br/>
 通过按钮调用邮我行提供的扫一扫API，然后在扫完后调用H5页面的方法，把值设置到H5页面用来显示文本的地方就可以了。<br/>
 <br/>
 温馨提示：<br/>
-上面的例子，我使用了onclick方法，调用事件，这里是给个反面的例子，尽量不要使用click,上面的注意事项也已经讲了。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;上面的例子，我使用了onclick方法，调用事件，这里是给个反面的例子，尽量不要使用click,上面的注意事项也已经讲了。<br/>
 所以我们的代码要这样写：<br/>
 ```
 document.getElementById('onScale').addEventListener('tap', function() {
@@ -155,13 +155,13 @@ document.getElementById('onScale').addEventListener('tap', function() {
 })
 ```
 <br/>
-通过这种方式，如果在邮我行上发布的项目，要调用手机的API，我们就需要使用这种方式来实现。<br/>
-如果是通过mui打包发行的我们直接使用mui提供的API就可以了，不需要调用邮我行的API。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;通过这种方式，如果在邮我行上发布的项目，要调用手机的API，我们就需要使用这种方式来实现。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;如果是通过mui打包发行的我们直接使用mui提供的API就可以了，不需要调用邮我行的API。<br/>
 
 ## Mui API Reference
 &nbsp;&nbsp;&nbsp;&nbsp;通过扫描上面的UI二维码，我们可以看到MUI的UI控件是很齐全的，基本市面上有的，它基本都有。<br/>
 UI控件的使用，这里就不额外讲解了，把文档的Demo拉下来就能看到效果了。<br/>
-Mui提供了以下调用手机API的接口，看图：<br/>
+M&nbsp;&nbsp;&nbsp;&nbsp;ui提供了以下调用手机API的接口，看图：<br/>
 <br/>
 <img src="https://00feng00.github.io/img/mui-interface-01.png">
 <img src="https://00feng00.github.io/img/mui-interface-02.png">
@@ -169,8 +169,8 @@ Mui提供了以下调用手机API的接口，看图：<br/>
 <img src="https://00feng00.github.io/img/mui-interface-04.png">
 <br/>
 <br/>
-上面的接口参考，我们可以把例子拉下来就可以运行的拉，但是记得一点，这些接口要使用mui打包才能使用。<br/>
-如果是在邮我行上发布的，我们还是得使用上面调用邮我行的例子。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;上面的接口参考，我们可以把例子拉下来就可以运行的拉，但是记得一点，这些接口要使用mui打包才能使用。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;如果是在邮我行上发布的，我们还是得使用上面调用邮我行的例子。<br/>
 
 ## Mui 窗口管理
 Mui 窗口管理包括5个部分，分别是：<br/>
@@ -181,9 +181,9 @@ Mui 窗口管理包括5个部分，分别是：<br/>
 5.预加载<br/>
 <br/>
 
-从一个页面点击链接跳转到另一个页面,这是我们会经常使用到的。<br/>
-mui的思路是：单webview只承载单个页面的dom，减少dom层级及页面大小；<br/>
-页面切换使用原生动画，将最耗性能的部分交给原生实现.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;从一个页面点击链接跳转到另一个页面,这是我们会经常使用到的。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;mui的思路是：单webview只承载单个页面的dom，减少dom层级及页面大小；<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;页面切换使用原生动画，将最耗性能的部分交给原生实现.<br/>
 <br/>
 这里我们讲一个例子，加深大家的理解：<br/>
 html:<br/>
@@ -211,7 +211,7 @@ js:<br/>
     })
 ```
 ## Mui 事件管理
-&nbsp;&nbsp;&nbsp;&nbsp;事件管理有以下事件：<br/>
+事件管理有以下事件：<br/>
 1.单击屏幕tap<br/>
 2.双击屏幕doubletap<br/>
 3.长按屏幕longtap<br/>
@@ -225,7 +225,7 @@ js:<br/>
 11.拖动中drag<br/>
 12.拖动结束dragend<br/>
 <br/>
-为了开发出更高性能的moble App，mui支持用户根据实际业务需求，通过mui.init方法中的gestureConfig参数，配置具体需要监听的手势事件。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;为了开发出更高性能的moble App，mui支持用户根据实际业务需求，通过mui.init方法中的gestureConfig参数，配置具体需要监听的手势事件。<br/>
 ```
 mui.init({
   gestureConfig:{
@@ -239,26 +239,26 @@ mui.init({
   }
 });
 ```
-自定义事件
-添加自定义事件监听操作和标准js事件监听类似，可直接通过window对象添加，代码如下：<br/>
+自定义事件<br />
+&nbsp;&nbsp;&nbsp;&nbsp;添加自定义事件监听操作和标准js事件监听类似，可直接通过window对象添加，代码如下：<br/>
 ```
 window.addEventListener('customEvent',function(event){
   //通过event.detail可获得传递过来的参数内容
   ....
 });
 ```
-通过mui.fire()方法可触发目标窗口的自定义事件。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;通过mui.fire()方法可触发目标窗口的自定义事件。<br />
 .fire( target , event , data ) <br />
 参数说明：<br />
-&nbsp;&nbsp;&nbsp;&nbsp;1)target<br />
-Type: WebviewObject (需传值的目标webview)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;2)event<br />
-Type: String 自定义事件名称<br />
-&nbsp;&nbsp;&nbsp;&nbsp;3)data<br />
-&nbsp;&nbsp;Type: JSON json格式的数据<br />
+1)target<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Type: WebviewObject (需传值的目标webview)<br />
+2)event<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Type: String 自定义事件名称<br />
+3)data<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Type: JSON json格式的数据<br />
 <br />
-具体例子：<br />
-列表逻辑：<br />
+具体例子<br />
+列表页面逻辑：<br />
 ```
 //初始化预加载详情页面
 mui.init({
@@ -288,7 +288,7 @@ mui('.mui-content').on('tap', 'a', function(e) {
 });  
 ```
 <br />
-详情逻辑:<br />
+详情页面逻辑:<br />
 ```
 //添加newId自定义事件监听
 window.addEventListener('newsId',function(event){
