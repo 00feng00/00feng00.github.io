@@ -111,7 +111,7 @@ Demo:<br/>
     </div>
     $M.page.addEvent('onLoad', function(params){
 	// 设置网络URL
-	webview.setUrl("http://172.20.10.6:8848/test/login.html?111");
+	webview.setUrl("your url");
     });
     // 设置状态栏颜色
     Utils.setStatusBarStyle('default');
