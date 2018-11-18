@@ -344,7 +344,7 @@ MUI是开源，它的社区是很活跃的，有问必答。我把常用的文�
 [事件管理](http://dev.dcloud.net.cn/mui/event/) http://dev.dcloud.net.cn/mui/event/<br/>
 [util](http://dev.dcloud.net.cn/mui/util/) http://dev.dcloud.net.cn/mui/util/<br/>
 util说明： <br/>
-&nbs;&nbsp;&nbsp;&nbsp;&nbsp;mui框架将很多功能配置都集中在mui.init方法中，要使用某项功能，只需要在mui.init方法中完成对应参数配置即可，<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mui框架将很多功能配置都集中在mui.init方法中，要使用某项功能，只需要在mui.init方法中完成对应参数配置即可，<br/>
 目前支持在mui.init方法中配置的功能包括：<br/>
 &nbs;&nbsp;&nbsp;&nbsp;&nbsp;创建子页面、关闭页面、手势事件配置、预加载、下拉刷新、上拉加载、设置系统状态栏背景颜色。<br/>
 [ajax](http://dev.dcloud.net.cn/mui/ajax/) http://dev.dcloud.net.cn/mui/ajax/<br/>
