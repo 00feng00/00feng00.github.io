@@ -48,7 +48,7 @@ UI 列表：<br/>
 
 ## 注意事项
 在讲解代码之前，我们要注意几个点：<br/>
-1丶固定栏靠前
+1丶固定栏靠前<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;固定栏，就是带有.mui-bar属性的节点，都是基于fixed定位的元素；<br/>
 常见组件包括：<br/>
 顶部导航栏（.mui-bar-nav）、底部工具条(.mui-bar-footer)、底部选项卡（.mui-bar-tab）;<br/>
