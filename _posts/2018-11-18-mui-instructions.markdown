@@ -167,7 +167,134 @@ Mui提供了以下调用手机API的接口，看图：<br/>
 <br/>
 <br/>
 上面的接口参考，我们可以把例子拉下来就可以运行的拉，但是记得一点，这些接口要使用mui打包才能使用。<br/>
-如果是在邮我行上发布的，我们还是得使用上面的例子。<br/>
+如果是在邮我行上发布的，我们还是得使用上面调用邮我行的例子。<br/>
+
+## Mui 窗口管理
+Mui 窗口管理包括5个部分，分别是：<br/>
+1.页面初始化<br/>
+2.创建子页面<br/>
+3.打开新页面<br/>
+4.关闭页面<br/>
+5.预加载<br/>
+<br/>
+
+从一个页面点击链接跳转到另一个页面,这是我们会经常使用到的。<br/>
+mui的思路是：单webview只承载单个页面的dom，减少dom层级及页面大小；<br/>
+页面切换使用原生动画，将最耗性能的部分交给原生实现.<br/>
+<br/>
+这里我们讲一个例子，加深大家的理解：<br/>
+html:<br/>
+```
+<li class="mui-table-view-cell" id="muiLocationDom">
+    <a id="location" class="mui-navigate-right">页面跳转</a>
+</li>
+```
+js:<br/>
+```
+    document.getElementById('location').addEventListener('tap', function() {
+	mui.openWindow({
+	    url: 'mapLocation.html',
+	    id: 'mapLocation.html',
+	    extras:{
+	      name:'mui'  //  自定义扩展参数，可以用来处理页面间传值
+	    },
+	    show: {
+	      aniShow: 'pop-in'
+	    },
+	    waiting: {
+              autoShow: false
+	    }
+	});
+    })
+```
+## Mui 事件管理
+&nbsp;&nbsp;&nbsp;&nbsp;事件管理有以下事件：<br/>
+1.单击屏幕tap<br/>
+2.双击屏幕doubletap<br/>
+3.长按屏幕longtap<br/>
+4.按住屏幕hold<br/>
+5.离开屏幕release<br/>
+6.向左滑动swipeleft<br/>
+7.向右滑动swiperight<br/>
+8.向上滑动swipeup<br/>
+9.向下滑动swipedown<br/>
+10.开始拖动dragstart<br/>
+11.拖动中drag<br/>
+12.拖动结束dragend<br/>
+<br/>
+为了开发出更高性能的moble App，mui支持用户根据实际业务需求，通过mui.init方法中的gestureConfig参数，配置具体需要监听的手势事件。<br/>
+```
+mui.init({
+  gestureConfig:{
+   tap: true, //默认为true
+   doubletap: true, //默认为false
+   longtap: true, //默认为false
+   swipe: true, //默认为true
+   drag: true, //默认为true
+   hold:false,//默认为false，不监听
+   release:false//默认为false，不监听
+  }
+});
+```
+自定义事件
+添加自定义事件监听操作和标准js事件监听类似，可直接通过window对象添加，代码如下：<br/>
+```
+window.addEventListener('customEvent',function(event){
+  //通过event.detail可获得传递过来的参数内容
+  ....
+});
+```
+通过mui.fire()方法可触发目标窗口的自定义事件。<br />
+.fire( target , event , data ) <br />
+参数说明：<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1)target<br />
+Type: WebviewObject (需传值的目标webview)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2)event<br />
+Type: String 自定义事件名称<br />
+&nbsp;&nbsp;&nbsp;&nbsp;3)data
+&nbsp;&nbsp;Type: JSON json格式的数据<br />
+<br />
+具体例子：<br />
+列表逻辑：<br />
+```
+//初始化预加载详情页面
+mui.init({
+  preloadPages:[{
+    id:'detail.html',
+    url:'detail.html'           
+  }
+  ]
+});
+
+var detailPage = null;
+//添加列表项的点击事件
+mui('.mui-content').on('tap', 'a', function(e) {
+  var id = this.getAttribute('id');
+  //获得详情页面
+  if(!detailPage){
+    detailPage = plus.webview.getWebviewById('detail.html');
+  }
+  //触发详情页面的newsId事件
+  mui.fire(detailPage,'newsId',{
+    id:id
+  });
+//打开详情页面          
+  mui.openWindow({
+    id:'detail.html'
+  });
+});  
+```
+<br />
+详情逻辑:<br />
+```
+//添加newId自定义事件监听
+window.addEventListener('newsId',function(event){
+  //获得事件参数
+  var id = event.detail.id;
+  //根据id向服务器请求新闻详情
+  .....
+});
+```
 
 ## Mui Ajax
 
