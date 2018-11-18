@@ -251,7 +251,7 @@ window.addEventListener('customEvent',function(event){
 Type: WebviewObject (需传值的目标webview)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;2)event<br />
 Type: String 自定义事件名称<br />
-&nbsp;&nbsp;&nbsp;&nbsp;3)data
+&nbsp;&nbsp;&nbsp;&nbsp;3)data<br />
 &nbsp;&nbsp;Type: JSON json格式的数据<br />
 <br />
 具体例子：<br />
@@ -297,7 +297,36 @@ window.addEventListener('newsId',function(event){
 ```
 
 ## Mui Ajax
-
+&nbsp;&nbsp;&nbsp;&nbsp;mui框架基于htm5plus的XMLHttpRequest，封装了常用的Ajax函数，支持GET、POST请求方式，支持返回json、xml、html、text、script数据类型； 本着极简的设计原则，mui提供了mui.ajax方法，并在mui.ajax方法基础上，进一步简化出最常用的mui.get()、mui.getJSON()、mui.post()三个方法。<br />
+我们以mui.ajax，讲解一个例子。<br />
+html：<br />
+```
+<button type="button" class="mui-btn mui-btn-blue" id="getRole">调用接口按钮</button>
+```
+js:
+```
+document.getElementById('getRole').addEventListener('tap', function() {
+    mui.ajax('your url',{
+	data: {
+	    username:"username",
+	    sercet:"222",
+	},
+	dataType:'json',//服务器返回json格式数据
+	type:'get',//HTTP请求类型
+	headers:{'Content-Type':'application/jsonapplication/json;charset=UTF-8'},
+	timeout:10000,//超时时间设置为10秒；
+	success:function(data){
+	    //服务器返回响应，根据响应结果，分析是否登录成功；
+	    alert(data)
+	},
+	error:function(xhr,type,errorThrown){
+	    //异常处理；
+	    alert(JSON.stringify(type))
+	}
+    });
+})
+```
+<br/ >
 
 ## 结语
 文末，个人建议：减少css二次渲染，就是少用复杂的选择器，少用padding、margin这些会二次修正页面的css。
