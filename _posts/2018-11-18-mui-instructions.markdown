@@ -334,31 +334,31 @@ document.getElementById('getRole').addEventListener('tap', function() {
 [代码块链接](http://dev.dcloud.net.cn/mui/snippet/) <br/>
 
 ## 结语
-&nbs;&nbsp;&nbsp;&nbsp;&nbsp;文末，个人建议：减少css二次渲染，就是少用复杂的选择器，少用padding、margin这些会二次修正页面的css。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文末，个人建议：减少css二次渲染，就是少用复杂的选择器，少用padding、margin这些会二次修正页面的css。
 如果追求极致的话，那jquery、zepto这些框架也不要使用，手机上都是webkit引擎，直接写document的api操作dom即没有兼容问题又没有效率问题。
 
 ## 常用文档地址汇总
 MUI是开源，它的社区是很活跃的，有问必答。我把常用的文档地址收集在这里，方便大家查找。<br/>
-[原生UI](http://dev.dcloud.net.cn/mui/ui/) <br/>
-[窗口管理](http://dev.dcloud.net.cn/mui/window/) <br/>
-[事件管理](http://dev.dcloud.net.cn/mui/event/) <br/>
-[util](http://dev.dcloud.net.cn/mui/util/) <br/>
+[原生UI](http://dev.dcloud.net.cn/mui/ui/) http://dev.dcloud.net.cn/mui/ui/<br/>
+[窗口管理](http://dev.dcloud.net.cn/mui/window/) http://dev.dcloud.net.cn/mui/window/<br/>
+[事件管理](http://dev.dcloud.net.cn/mui/event/) http://dev.dcloud.net.cn/mui/event/<br/>
+[util](http://dev.dcloud.net.cn/mui/util/) http://dev.dcloud.net.cn/mui/util/<br/>
 util说明： <br/>
 &nbs;&nbsp;&nbsp;&nbsp;&nbsp;mui框架将很多功能配置都集中在mui.init方法中，要使用某项功能，只需要在mui.init方法中完成对应参数配置即可，<br/>
 目前支持在mui.init方法中配置的功能包括：<br/>
 &nbs;&nbsp;&nbsp;&nbsp;&nbsp;创建子页面、关闭页面、手势事件配置、预加载、下拉刷新、上拉加载、设置系统状态栏背景颜色。<br/>
-[ajax](http://dev.dcloud.net.cn/mui/ajax/) <br/>
-[下拉刷新](dev.dcloud.net.cn/mui/pulldown/) <br/>
-[上拉加载](http://dev.dcloud.net.cn/mui/pullup/) <br/>
-[快捷代码块](http://dev.dcloud.net.cn/mui/snippet/) <br/>
-[修改mui默认的图标](http://ask.dcloud.net.cn/article/128) <br/>
+[ajax](http://dev.dcloud.net.cn/mui/ajax/) http://dev.dcloud.net.cn/mui/ajax/<br/>
+[下拉刷新](dev.dcloud.net.cn/mui/pulldown/) dev.dcloud.net.cn/mui/pulldown/<br/>
+[上拉加载](http://dev.dcloud.net.cn/mui/pullup/) http://dev.dcloud.net.cn/mui/pullup/<br/>
+[快捷代码块](http://dev.dcloud.net.cn/mui/snippet/) http://dev.dcloud.net.cn/mui/snippet/<br/>
+[修改mui默认的图标](http://ask.dcloud.net.cn/article/128) http://ask.dcloud.net.cn/article/128<br/>
 自定义mui控件样式 <br/>
 样式代码覆盖，覆盖mui默认的。<br/>
 需要注意一点：<br/>
     sass文件开源，自己修改sass并编译也可以；但是如果mui升级了，需要自己手动升级 （一般不建议改这里）。<br/>
-[页面间传值](http://ask.dcloud.net.cn/article/63) <br/>
-[自定义事件](http://dev.dcloud.net.cn/mui/event/#customevent)
-[5 + APP API Reference](http://www.html5plus.org/doc/h5p.html)
+[页面间传值](http://ask.dcloud.net.cn/article/63) http://ask.dcloud.net.cn/article/63<br/>
+[自定义事件](http://dev.dcloud.net.cn/mui/event/#customevent) http://dev.dcloud.net.cn/mui/event/#customevent<br/>
+[5 + APP API Reference](http://www.html5plus.org/doc/h5p.html) http://www.html5plus.org/doc/h5p.html<br/>
 
 
 
