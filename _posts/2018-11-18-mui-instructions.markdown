@@ -34,6 +34,10 @@ H5的技术栈有好几种，这里个人推荐使用VUE，因为后面的更新
 &nbsp;&nbsp;从上面的架构分析，我们可以很清晰的看到，我们是使用H5来开发的。<br/>
 MUI UI 控件:<br/>
 <img src="https://00feng00.github.io/img/mui-code-m.png">
+UI 列表：<br/>
+<img src="https://00feng00.github.io/img/mui-ui-01.png">
+<img src="https://00feng00.github.io/img/mui-ui-02.png">
+<img src="https://00feng00.github.io/img/mui-ui-03.png">
 体验版：<br/>
 可以体验我写出来的Demo,里面有一个调用生产的demo,调用用户登录查询接口。<br/>
 后端开发人员需要注意一点：允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
