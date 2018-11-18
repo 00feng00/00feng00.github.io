@@ -43,4 +43,61 @@ UI 列表：<br/>
 后端开发人员需要注意一点：允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
 
 ## 注意事项
+在讲解代码之前，我们要注意几个点：
+1丶固定栏靠前
+&nbsp;&nbsp;&nbsp;&nbsp;固定栏，就是带有.mui-bar属性的节点，都是基于fixed定位的元素；<br/>
+常见组件包括：<br/>
+顶部导航栏（.mui-bar-nav）、底部工具条(.mui-bar-footer)、底部选项卡（.mui-bar-tab）;<br/>
+这些元素使用时需遵循一个规则：<br/>
+放在.mui-content元素之前，即使是底部工具条和底部选项卡，也要放在.mui-content之前，否则固定栏会遮住部分主内容；<br/>
+2丶一切内容都要包裹在mui-content中<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;除了固定栏之外，其它内容都要包裹在.mui-content中，否则就有可能被固定栏遮罩，原因：固定栏基于Fixed定位，不受流式布局限制，普通内容依然会从top:0的位置开始布局，这样就会被固定栏遮罩，mui为了解决这个问题，定义了如下css代码：
+```
+    .mui-bar-nav ~ .mui-content {
+        padding-top: 44px;
+    }
+    .mui-bar-footer ~ .mui-content {
+        padding-bottom: 44px;
+    }
+    .mui-bar-tab ~ .mui-content {
+        padding-bottom: 50px;
+    }
+```
+当然拉，这个是H5开发，所以也可以自定义样式。everything is ok。<br/>
+
+3丶始终为button按钮添加type属性<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;如果button按钮没有type属性，浏览器默认按照type=submit逻辑处理，这样若将没有type的button放在form表单中，点击按钮就会执行form表单提交，页面就会刷新，用户体验极差。
+
+4丶页面初始化：必须执行mui.init方法<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;mui在页面初始化时，初始化了很多参数配置，比如：按键监听、手势监听等，因此mui页面都必须调用一次mui.init()方法；<br/>
+
+5丶页面跳转：抛弃href跳转<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;建议使用mui.openWindow方法打开一个新的webview，mui会自动监听新页面的loaded事件，若加载完毕，再自动显示新页面；
+有兴趣深入了解，拓展链接：<br/>
+[hello mui中的无等待窗体切换是如何实现的](http://ask.dcloud.net.cn/article/106) <br/>
+[提示HTML5的性能体验系列之一 避免切页白屏](http://ask.dcloud.net.cn/article/25) <br/>
+
+6丶点击：忘记click<br/>
+手机浏览器的click点击存在300毫秒延迟，mui为了解决这个问题，封装了tap事件，因此在任何点击的时候，请忘记click及onclick操作，统统使用如下代码：
+```
+    element.addEventListener('tap',function(){
+        //点击响应逻辑
+    });
+```
+这里讲解下，为什么click会有300ms：<br/>
+双击缩放(double tap to zoom)<br/>
+当用户一次点击屏幕之后，浏览器并不能立刻判断用户是要进行双击缩放，还是想要进行单击操作。因此，iOS Safari 就等待 300 毫秒，以判断用户是否再次点击了屏幕。<br/>
+于是，300 毫秒延迟就这么诞生了。<br/>
+
+最后有个需要注意的一点：<br/>
+mui为简化开发，将plusReady事件封装成了mui.plusReady()方法，凡涉及到HTML5+的api，建议都写在mui.plusReady方法中；<br/>
+
+
+
+
+
+
+
+
+
 
