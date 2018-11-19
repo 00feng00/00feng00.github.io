@@ -38,6 +38,11 @@ tags:
 三丶服务端<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;服务端我们使用JAVA，这里需要注意一点，后端开发人员要处理允许跨域调用，而且要允许option的访问，对option进行过滤。<br/>
 <br/>
+
+## MUI简介
+&nbsp;&nbsp;&nbsp;&nbsp;Mui追求性能体验，它是最接近原生APP体验的高性能前端框架。<br />
+MUI的特点是：轻量、原生UI、流畅体验。<br />
+<br />
 ## 体验
 &nbsp;&nbsp;&nbsp;&nbsp;从上面的架构分析，我们可以很清晰的看到，我们是使用H5来开发的。<br/>
 MUI UI 控件:<br/>
