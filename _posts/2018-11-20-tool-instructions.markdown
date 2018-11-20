@@ -4,7 +4,7 @@ title:        "日常关注前端工具"
 subtitle:     "tool instructions"
 date:         2018-11-20 22:05:00
 author:       "ZeFeng"
-header-img:   "img/ice_header_image.jpg"
+header-img:   "img/post-bg-e2e-ux.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
