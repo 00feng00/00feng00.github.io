@@ -33,7 +33,6 @@ Virtual DOM 完全重写，mounting & patching 提速 100% ；<br/>
 放弃 Object.defineProperty ，使用更快的原生 Proxy ；<br/>
 组件实例初始化速度提高 100％ ；<br/>
 提速一倍/内存使用降低一半。<br/>
-<br/>
 2、更小 <br/>
 3、更易维护<br/>
 4、更易于原生<br/>
