@@ -29,7 +29,6 @@ tags:
 <br/>
 之所以现在还不使用这套uni-app，因为它目前发布了小程序丶APP，还没有发布H5版本的，后面会发布的。<br/>
 <br/>
-<br/>
 
 （11月14日-16日于多伦多小右发表了名为 “ Vue 3.0 Updates ” 的主题演讲，概括起来就是more faster more easier）<br/>
 Vue3.0特点：<br/>
@@ -46,7 +45,6 @@ Virtual DOM 完全重写，mounting & patching 提速 100% ；<br/>
 4、更易于原生<br/>
 5、让开发者更轻松<br/>
 <br/>
-
 二丶使用MUI发布APP<br/>
 &nbsp;&nbsp;我们使用H5+APP这套来开发，然后我们可以发布Android丶IOS的APP应用。<br/>
 (MUI后面我们会讲很详细的)<br/>
