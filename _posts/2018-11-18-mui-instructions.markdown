@@ -29,8 +29,24 @@ tags:
 <br/>
 之所以现在还不使用这套uni-app，因为它目前发布了小程序丶APP，还没有发布H5版本的，后面会发布的。<br/>
 <br/>
-（额外的一点VUE3.0国内将在11.24发布，more faster more easier）<br/>
 <br/>
+
+（11月14日-16日于多伦多小右发表了名为 “ Vue 3.0 Updates ” 的主题演讲，概括起来就是more faster more easier）<br/>
+Vue3.0特点：<br/>
+1、更快<br/>
+Virtual DOM 完全重写，mounting & patching 提速 100% ；<br/>
+更多编译时（compile-time）提醒以减少 runtime 开销；<br/>
+基于 Proxy 观察者机制以满足全语言覆盖及更好的性能；<br/>
+放弃 Object.defineProperty ，使用更快的原生 Proxy ；<br/>
+组件实例初始化速度提高 100％ ；<br/>
+提速一倍/内存使用降低一半。<br/>
+<br/>
+2、更小 <br/>
+3、更易维护<br/>
+4、更易于原生<br/>
+5、让开发者更轻松<br/>
+<br/>
+
 二丶使用MUI发布APP<br/>
 &nbsp;&nbsp;我们使用H5+APP这套来开发，然后我们可以发布Android丶IOS的APP应用。<br/>
 (MUI后面我们会讲很详细的)<br/>
