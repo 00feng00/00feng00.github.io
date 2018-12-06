@@ -26,9 +26,11 @@ sudo apt-get install git
 安装方式二：<br />
 &nbsp;&nbsp;&nbsp;&nbsp;其他Linux版本，可以直接通过源码安装。<br />
 先从Git官网下载源码，然后解压，依次输入以下这几个命令安装就好了：<br />
-./config<br />
-make<br />
-sudo make install<br />
+```
+./config
+make
+sudo make install
+```
 
 ## Windows上安装Git
 &nbsp;&nbsp;&nbsp;&nbsp;在Windows上使用Git，可以从Git官网直接[下载安装程序](https://git-scm.com/downloads)，（网速慢的同学请移步[国内镜像](https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit)），然后按默认选项安装即可。<br />
