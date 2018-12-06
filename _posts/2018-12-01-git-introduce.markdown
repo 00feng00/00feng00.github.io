@@ -4,7 +4,7 @@ title:        "git安装及使用"
 subtitle:     "git instructions"
 date:         2018-12-01 22:05:00
 author:       "ZeFeng"
-header-img:   "img/ice_header_image.jpg"
+header-img:   "img/git_bg.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
@@ -65,5 +65,44 @@ $ git init
 
 
 ## 提交文件Demo
+&nbsp;&nbsp;&nbsp;&nbsp;完成了上面的搭建，我们这里来写一个使用git的例子。一般项目都有一个readme.txt，所以我们以这个写个Demo。<br />
+Step1:<br />
+编写一个readme.txt文件,内容如下：<br />
+```
+Git is a version control system.
+Git is free software.
+```
+Tip: 新建的文件一定要放到mygit的目录下(子目录也行)。
+
+Step2:<br />
+把文件添加到仓库:<br />
+```
+$ git add readme.txt
+```
+Step3:<br />
+把文件提交到仓库:<br />
+```
+$ git commit -m "wrote a readme file"
+[master (root-commit) eaadf4e] wrote a readme file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+```
+Tip:<br />
+git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。<br />
+
+#### 可以多次add不同的文件
+commit可以一次提交很多文件，所以你可以多次add不同的文件：<br />
+```
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
+```
+
+## 结语
+&nbsp;&nbsp;&nbsp;&nbsp;这篇文章讲解了如何搭建git，创建本地仓库，还有一个提交文件的Demo。
+
+
+
+
 
 
