@@ -16,6 +16,11 @@ tags:
 
 ## Linux上安装Git
 &nbsp;&nbsp;&nbsp;&nbsp;在安装前，我们可以先敲下命令 git，看下看看系统有没有安装Git。<br />
+```
+$ git
+The program 'git' is currently not installed. You can install it by typing:
+sudo apt-get install git
+```
 安装方式一：<br />
 &nbsp;&nbsp;&nbsp;&nbsp;如果你用Debian或Ubuntu Linux，通过一条sudo apt-get install git就可以直接完成Git的安装，非常简单。<br />
 安装方式二：<br />
@@ -29,5 +34,36 @@ sudo make install<br />
 &nbsp;&nbsp;&nbsp;&nbsp;在Windows上使用Git，可以从Git官网直接[下载安装程序](https://git-scm.com/downloads)，（网速慢的同学请移步[国内镜像](https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit)），然后按默认选项安装即可。<br />
 
 安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！<br />
+安装后，还需要输入下面两个命令，完成配置：<br />
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+```
+
+## 创建版本库
+&nbsp;&nbsp;&nbsp;&nbsp;版本库其实就是我们平时说的仓库，也可以理解为目录。<br />
+这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。<br />
+
+#### Step1
+创建空目录：<br />
+```
+$ mkdir mygit
+$ cd mygit
+$ pwd
+```
+Tip: mygit名字自己定义就可以了。<br />
+pwd命令的作用是用于显示当前目录<br />
+
+#### Step2
+把这个目录变成Git可以管理的仓库：<br />
+```
+$ git init
+```
+仓库搭建好之后，这里我们搭建的是一个空的仓库。<br />
+可以看到目录下多了一个.git的目录，这个目录是Git来跟踪管理版本库的（一般不要去修改这个目录，很容易把Git仓库给破坏）。<br />
+如果没有看到.git目录，那是因为这个目录默认是隐藏的，用ls -ah命令就可以看见。<br />
+
+
+## 提交文件Demo
 
 
