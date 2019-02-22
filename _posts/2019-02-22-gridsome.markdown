@@ -1,0 +1,70 @@
+---
+layout:       post
+title:        "gridsome中文教程"
+subtitle:     "A JAMstack framework for building blazing fast websites with Vue.js"
+date:         2019-02-22 22:00:00
+author:       "ZeFeng"
+header-img:   "img/home-bg-o.jpg"
+header-mask:  0.3
+catalog:      true
+tags:
+    - gridsome
+---
+## Gridsome简介
+
+Gridsome使用Vue.js构建超快网站的JAMstack框架，JAMstack是指使用JavaScript、API和Markup构建的技术堆栈。
+现在这个项目处于积极开发阶段，存在一些未知的问题，如果有发现，可以联系gridsome管理，提一些优化项。
+
+
+## Gridsome的特点
+
+#### 1.新的开发技术栈
+
+Gridsome使用的技术工具是现在最为广泛应用的，使用Vue.js，GraphQL和Webpack构建网站，接受度会更高。gridsome包含了热重新加载和Node.js的所有功能。
+官方号称Gridsome使用Vue.js和GraphQL构建超快的网站。
+
+
+#### 2.引用自己的数据
+
+Gridsome允许在内容里面引用任何CMS或数据源。 从WordPress，Contentful或任何其他无头CMS或API中提取数据，并在组件和页面中使用GraphQL访问它。
+
+
+#### 3.移动优先框架
+
+Gridsome首先只加载关键的HTML，CSS和JavaScript，然后在后台预取下一页，这样用户可以非常快速地点击，无需重新加载页面，离线也是如此。
+
+
+#### 4.快速加载
+
+Gridsome会自动优化前端加载并快速执行，您可以code-splitting, asset optimisation, lazy-loading, 以及近乎完美的Lighthouse scores out-of-the-box。
+
+
+#### 5.全球性免费范围拓展
+
+Gridsome的站点可以完全托管在CDN上，可以处理数千到数百万次点击而不会中断， 并且不需要昂贵的服务器成本。
+
+
+除了上面的特点，可以设计和构建与CMS分离的网站。 这意味着可以轻松更改CMS或测试完整的重新设计，而不会破坏我们的网站。
+
+## Gridsome的使用
+```
+$ npm install -g @gridsome/cli
+$ gridsome create awesome-site
+$ cd awesome-site
+$ gridsome develop
+```
+Tip: 命令解析 <br />
+npm install -g @gridsome/cli <br />
+安装gridsome脚手架<br />
+gridsome create awesome-site <br />
+使用这条命令来创建一个新项目
+cd awesome-site
+打开文件夹
+gridsome develop
+在 http://localhost:8080启动本地开发服务器
+
+
+运行上面的命令后，浏览器在 http://localhost:8080 打开本地的站点。接下来，只需要编写我们自己的代码即可！
+
+以上就是本文要分享的内容了
+
