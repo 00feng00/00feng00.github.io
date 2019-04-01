@@ -4,7 +4,7 @@ title:        "MUI使用教程"
 subtitle:     "easy mock express"
 date:         2019-03-31 10:05:00
 author:       "ZeFeng"
-header-img:   "img/home-bg-o.jpg"
+header-img:   "img/mockBg.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
