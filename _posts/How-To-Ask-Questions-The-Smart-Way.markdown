@@ -12,6 +12,7 @@ tags:
 ---
 
 ## 转载
+[原文链接](http://www.catb.org/~esr/faqs/smart-questions.html)
 Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen<br>
 Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu<br>
 
