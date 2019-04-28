@@ -1,4 +1,3 @@
-[TOC]
 ---
 layout:       post
 title:        "How-To-Ask-Questions-The-Smart-Way"
@@ -17,7 +16,7 @@ Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen
 Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu
 
 ## 目录
-
+[TOC]
 # 声明
 许多项目在他们的使用协助/说明网页中链接了本指南，这么做很好，我们也鼓励大家都这么做。但如果你是负责管理这个项目网页的人，请在超链接附近的显著位置上注明：
 
