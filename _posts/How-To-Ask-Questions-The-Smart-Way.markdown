@@ -4,7 +4,7 @@ title:        "How-To-Ask-Questions-The-Smart-Way"
 subtitle:     "tool instructions"
 date:         2019-04-28 22:05:00
 author:       "ZeFeng"
-header-img:   "img/post-bg-e2e-ux.jpg"
+header-img:   "img/post-bg-os-metro.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
