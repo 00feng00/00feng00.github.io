@@ -1,3 +1,17 @@
+---
+layout:       post
+title:        "页面加载性能优化"
+subtitle:     "performance optimizing"
+date:         2019-10-28 18:05:00
+author:       "ZeFeng"
+header-img:   "img/ems_company_logo.jpg"
+header-mask:  0.3
+catalog:      true
+tags:
+    - 性能优化
+---
+
+
 # 4. 页面加载性能优化
 
 在互联网网站百花齐放的今天，网站响应速度是用户体验的第一要素，其重要性不言而喻，这里有几个关于响应时间的重要条件：
