@@ -1,7 +1,7 @@
 ---
 layout:       post
 title:        "推荐mac比较好用的软件"
-subtitle:     "browser-sync instructions"
+subtitle:     "recommend mac software"
 date:         2019-12-04 22:00:00
 author:       "ZeFeng"
 header-img:   "img/post-bg-universe.jpg"
