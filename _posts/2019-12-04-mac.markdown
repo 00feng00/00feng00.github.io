@@ -1,15 +1,17 @@
 ---
 layout:       post
-title:        "browser-sync使用教程"
+title:        "推荐mac比较好用的软件"
 subtitle:     "browser-sync instructions"
-date:         2018-09-16 22:00:00
+date:         2019-12-04 22:00:00
 author:       "ZeFeng"
 header-img:   "img/post-bg-universe.jpg"
 header-mask:  0.3
 catalog:      true
 tags:
-    - 同步测试工具
+    - mac软件
 ---
+
+## 前言
 
 作为一个工具控，一直在社区索取别人的营养，今天在下将我搜集的一些应用贡献出来，推介二十几个我常用的软件。一些是其他人反复推介确实经典，另一些是我偶然发现但经过使用感觉非常好用，一并献上，大家可以根据自己的需要，看看是不是正需要这些软件，并解决自己生产生活中的痛点。
 
@@ -22,53 +24,27 @@ tags:
 1. Alfred
 正如 Windows 系统上 必须排在第一个一样，Mac 平台 Alfred 也必须排在第一个。
 
-
-
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_01.jpg"><br>
 
 有的人说 Alfred 是 Mac 上最强大的工具台，不亲自体验一下，你是无法理解 Alfred 的强大之处，比如我，安装并使用之后 5 分钟，我就把聚焦的快捷键取消，一年中使用的次数屈指可数，而 Alfred 却基本上成为我使用频率最高的工具。
 
 快捷搜索 ，快捷搜索是 也具有的功能，除了可以搜索本地文件、安装的应用、MacOS 设置项等，还可以使用网页搜索，比如输入 gg 我的存款呢？ 就可以直接打开默认浏览器在谷歌搜索中搜索，还可以自定义输入其他关键字，只需把 Search URL 中的关键字换成 {query} 即可。
 
-
-
-
-
- 
-
-
+<img src="https://00feng00.github.io/img/mac_02.jpg"><br>
 
 快捷打开 ，我们也可以使用快捷打开链接的方式，快速打开默认网页，比如我设置 blog 命令为快速打开我的博客 https://github.com/SHERlocked93/blog，那么只要输入 blog 并 Enter 即可在默认浏览器完成打开博客地址的功能。
 
-
-
-
-
- 
-
-
+<img src="https://00feng00.github.io/img/mac_03.jpg"><br>
 
 搜索标签 ，我们可以在 Alfred 里快捷访问我们保存在浏览器中的标签，比如你可以把 Vue、vue-router、vuex 等的官网收藏在浏览器的标签，然后在 Alfred 中键入 bm vue，就可以搜索出我们标签中所有含有 vue 标签的网址。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_04.jpg"><br>
 
 文字段自动扩展 ，在下会经常使用一些文字段，比如我会经常键入我的手机号，但是我并不很喜欢经常手打这么长的数字，那么我就设置 zsj 自动扩展成我设置好的手机号。
 
 想设置的同学在 Features -> Snippets 即可设置，下面列举一些我常用的自动扩展，仅供大家参考。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_05.jpg"><br>
 
 Alfred 还有其他很多优秀的功能，比如自定义 Workflow、LargeType、计算器等等好玩的功能，不亲自试试是无法理解它好玩的地方的。
 
@@ -83,11 +59,7 @@ App Store 里就可以获取 Alfred，不过不便宜，所以你可以购买，
 
 另外，在复制时还可以去掉原复制源的格式信息，把任意内容复制为纯文本。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_06.jpg"><br>
 
 按住 Shift + left/right 可以一次选择多个剪切板对象复制，我把激活 Paste 的快捷键设置为 Option + ~，就是数字键 1 左边那个，然后把快速粘贴设置为 Option + 1、2... ，这样就可以在打开的之后，左手拇指按着 Option 不用动，就可以快捷选中其他的选项了。
 
@@ -96,11 +68,7 @@ App Store 上搜索就可以直达，售价 68 块（也可以在网上找到资
 3. PicGo
 如果你经常使用 Markdown，那么你一定遇到一个问题，图片怎么转化为图床链接，在用过好几款免费或收费图床工具之后，对这款开源的图床工具使用的功能强大、使用简单印象深刻，而且还支持常用的几种图床，所以这里推介给大家。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_07.jpg"><br>
 
 你可以把图片拖拽到 Menubar 上的小图标上上传，也可以拖拽到软件首页的上传区上传，也可以把图片复制到剪切板中使用快捷键上传。其中第三种方式使用最为方便，也是在下使用最多的一种方式。
 
@@ -113,13 +81,7 @@ App Store 上搜索就可以直达，售价 68 块（也可以在网上找到资
 4. Magnet
 有时候你需要并排比较数据，或是要在一个屏幕上排列三个应用的时候，窗口管理工具就显得必不可少了。这里推介一个我用了一下感觉十分好用的窗口管理工具 Magnet，类似的管理工具似乎有好几个，其他的没用不做评价。
 
-
-
-
-
- 
-
-
+<img src="https://00feng00.github.io/img/mac_08.jpg"><br>
 
 把目标窗口进行拖动就可以快速调整窗口位置，比如拖动窗口到边缘，可将窗口大小调整到屏幕的一半。
 
@@ -131,11 +93,7 @@ App Store 上搜索就可以直达，售价 68 块（也可以在网上找到资
 
 Magnet 同时支持键盘快捷方式，可顺利适配所有命令。您可通过菜单栏上的小图标，找到预定设置或创建自己的设置集。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_09.jpg"><br>
 
 也可以使用快捷键的方式，当焦点在某个窗口的时候，可以使用快捷键来快速将窗口进行排列，也可以通过菜单栏上的小图标，来进行自己希望的窗口排列，常用的有居左、居右、最大化、左 2/3、右 2/3，具体如何使用还是看你的个人习惯和屏幕大小了。
 
@@ -146,23 +104,13 @@ Magnet 在 App Store 上搜索即可获取，买的话也挺便宜的，经常�
 5. Text Scanner
 有时候你手里有一张图片，图片上很多文字，你想把图片上的文字复制到本地，又或者你发现一个网页，但是这个网页是禁止复制的（比如 App Store 上的软件介绍），你可以选择 QQ 上的识图功能，但我这里推介一个更强大的工具 Text Scanner。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_10.jpg"><br>
 
 在用过五六个识图软件之后，终于选出了识别速度、识别准确率、人机工程最符合我的预期的软件，扫描速度和辨识率都可以称得上惊艳，，除了可以准确识别中文，还可以识别英文、泰语、韩语、俄语、法语等语言，也可以批量识别图片、驾驶证、身份证、表格、证件照等。
 
 这款软件也是通过 App Store 来获取，我购买了正版，当然和前面一样，也可以找到资源 🙃，不过这款软件还经常升级，购买的话会省却很多麻烦，推介购买正版。
 
-
-
-
-
- 
-
-
+<img src="https://00feng00.github.io/img/mac_11.jpg"><br>
 
 我的快捷键是 command + shift + 3，跟截图的相对应，仅供参考。
 
@@ -173,11 +121,7 @@ Magnet 在 App Store 上搜索即可获取，买的话也挺便宜的，经常�
 
 还有截图高亮工具、马赛克等等功能，在截图的时候在旁边可以选择生成一圈阴影，和 Mac 自带的截图工具一样，甚至更强大，强烈推介。值得一提的是，你可以选择截图的格式 jpg/png，如果你选择 png 格式，那么你的截图阴影部分背景是透明的，十分贴心。
 
-
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_12.jpg"><br>
 
 在 App Store 里就可以搜索到 Xnip，我的快捷键是 Command + Shift + 1，在下特地购买了一个永久版，没几块钱（如果不愿意花钱的话也有资源 🤫）。
 
@@ -186,15 +130,7 @@ Magnet 在 App Store 上搜索即可获取，买的话也挺便宜的，经常�
 
 SwitchKey 可以根据当前焦点所在应用自动切换指定的输入法，让你无需关注输入法切换这种琐碎的操作。
 
-
-
-
-
- 
-
-
-
- 
+<img src="https://00feng00.github.io/img/mac_13.jpg"><br>
 
 确定要为某个软件添加何种输入法很简单，切换好输入法，打开目标软件之后，然后在 Menubar 的软件菜单内点击 Add Current （上图最上方那个按钮）即可将其对应的输入法这项选择配置加入进来，下次打开该软件时就会自动恢复指定输入状态。如果不小心配置错误，选中记录值后按 Delete 键即可，轻松高效。
 
@@ -203,13 +139,7 @@ SwitchKey 可以根据当前焦点所在应用自动切换指定的输入法，�
 8. pap.er
 外观精致设计感十足的 Mac 当然要配上精美的壁纸，pap.er[10] 就是这样一款可以给你提供精美壁纸的应用，它在 Unsplash 图片站上获取授权的图片，并提供给用户。
 
-
-
-
-
- 
-
- 
+<img src="https://00feng00.github.io/img/mac_14.jpg"><br>
 
 安装好之后，Menubar 上点击 pap.er 的图标，就会弹出壁纸列表，单击「设为桌面」就可以自动下载并使用图片作为壁纸了，在设置中还可以选择每小时或每日自动更换壁纸，也可以在在二级菜单中查看以前下载过的壁纸。
 
@@ -218,13 +148,7 @@ SwitchKey 可以根据当前焦点所在应用自动切换指定的输入法，�
 9. FinderGo
 如果你需要经常使用终端，那么 FinderGo 可以帮助你快速打开终端，并定位到当前文件夹目录下，是日常使用时的一个很实用的小工具。
 
-
-
-
-
- 
-
- 
+<img src="https://00feng00.github.io/img/mac_15.jpg"><br>
 
 具体下载和配置可以百度一下，网上很多教程。
 
@@ -233,13 +157,7 @@ SwitchKey 可以根据当前焦点所在应用自动切换指定的输入法，�
 10. GIF Brewery 3
 在使用了多款 GIF 录制工具之后，终于选择了这款功能强大的软件，强烈推介！
 
-
-
-
-
- 
-
- 
+<img src="https://00feng00.github.io/img/mac_16.jpg"><br>
 
 GIF Brewery 3 可以在录制好之后，调整动画播放速度、帧率的时长、截取动画的某个部分、在某些帧下增加文字或贴图、增加水印或字幕、重新调整视频尺寸、调整色彩数等功能，可以说，它已经具备一个视频编辑软件大部分的功能了。
 
@@ -260,9 +178,11 @@ GIF Brewery 3 可以在录制好之后，调整动画播放速度、帧率的时
 
  
 
-References
+## References
+
 [1] 推介几款 windows 下非常好用的工具: https://juejin.im/post/5c2eca54f265da61171cdc48
 [2] 干货满满！推介几款 Mac 下非常好用的软件（上）: https://juejin.im/post/5de664e5f265da33b82bcfce
+[3] Listary: https://www.listary.com/
 [4] Ditto: https://ditto-cp.sourceforge.io/
 [5] Paste: https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235
 [6] PicGo: https://molunerfinn.com/PicGo/
@@ -279,6 +199,5 @@ References
 [17] Github - SHERlocked93/blog: https://github.com/SHERlocked93/blog
 
 
-
 欢迎关注公众号，进一步技术交流：
-
+<img src="https://00feng00.github.io/img/zefeng.jpg"><br>
