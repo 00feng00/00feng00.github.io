@@ -166,7 +166,8 @@ Andfix 是 "Android hot-fix" 的缩写。<br />
 [项目链接](https://github.com/alibaba/beidou)<br />
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>可视化开源框架集合</strong><br />
-1、AntV 
+<br />
+1、AntV <br />
 [项目链接](https://antv.vision)<br />
 
 2、G2<br />
