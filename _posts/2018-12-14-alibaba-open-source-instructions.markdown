@@ -166,43 +166,41 @@ Andfix 是 "Android hot-fix" 的缩写。<br />
 [项目链接](https://github.com/alibaba/beidou)<br />
 
 27. 可视化开源框架集合
-&nbsp;&nbsp;&nbsp;&nbsp;1、AntV 
+1、AntV 
 [项目链接](https://antv.vision)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;2、G2<br />
+2、G2<br />
 &nbsp;&nbsp;&nbsp;&nbsp;G2 是一套基于可视化编码的图形语法，以数据驱动，具有高度的易用性和扩展性，用户无需关注各种繁琐的实现细节，一条语句即可构建出各种各样的可交互的统计图表<br />
 [项目链接](https://github.com/antvis/g2)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;3、g2plot<br />
+3、g2plot<br />
 &nbsp;&nbsp;&nbsp;&nbsp;g2plot 的定位是开箱即用、易于配置、具有良好视觉和交互体验的通用图表库。<br />
 [项目链接](https://github.com/antvis/g2plot)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;4、F2<br />
+4、F2<br />
 &nbsp;&nbsp;&nbsp;&nbsp;F2 是一个专注于移动，开箱即用的可视化解决方案，完美支持 H5 环境同时兼容多种环境（node, 小程序，weex）。完备的图形语法理论，满足各种可视化需求。专业的移动设计指引为你带来最佳的移动端图表体验。<br />
 [项目链接](https://github.com/antvis/f2)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;5、G6<br />
+5、G6<br />
 &nbsp;&nbsp;&nbsp;&nbsp;G6 是 AntV 旗下的图可视化与图分析引擎，G 来自于 Graphic、Graph ，意味着我们要基于图分析技术做图可视化；6 来自于《六度分隔理论》，表达了我们对关系数据、关系网络的敬畏和着迷。<br />
 [项目链接](https://github.com/antvis/g6)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;6、Graphin<br />
+6、Graphin<br />
 &nbsp;&nbsp;&nbsp;&nbsp;Graphin 是一个基于 G6 封装的关系可视分析工具 ，简单，高效，开箱即用，取自 Graph Insight，图的分析洞察。<br />
 [项目链接](https://github.com/antvis/graphin6)<br />
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;7、L7<br />
+7、L7<br />
 &nbsp;&nbsp;&nbsp;&nbsp;L7 是一个基于 WebGL 的开源大规模地理空间数据可视分析开发框架。L7 中的 L 代表 Location，7 代表世界七大洲，寓意能为全球位置数据提供可视分析的能力。<br />
 [项目链接](https://github.com/antvis/l7)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;8、G<br />
+8、G<br />
 &nbsp;&nbsp;&nbsp;&nbsp;G 是 AntV 几个产品共同的底层 2D 渲染引擎，高效易用，专注于图形的渲染、拾取、事件以及动画机制，给上层 G2、F2、G6 提供统一的渲染机制。<br />
 [项目链接](https://github.com/antvis/g7)<br />
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;9、ChartCubehttps://github.com/antvis/AVA
+9、ChartCubehttps://github.com/antvis/AVA
 &nbsp;&nbsp;&nbsp;&nbsp;ChartCube 是一个可以快速完成图表制作的在线工具，只需要三步就可以创建出高品质的图表。<br />
 [项目链接](https://chartcube.alipay.com)<br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;10、AVA<br />
+10、AVA<br />
 &nbsp;&nbsp;&nbsp;&nbsp;AVA 是一个智能可视分析框架，包含研发时的智能研发向导，阅读时的智能交互增强，可视分析时的智能辅助<br />
 [项目链接](https://github.com/antvis/AVA)<br />
