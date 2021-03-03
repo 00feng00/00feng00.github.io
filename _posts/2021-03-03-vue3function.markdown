@@ -14,7 +14,7 @@ tags:
 
 这是 **Vue 3.0 进阶系列** 的第二篇文章。本文将以一个简单的示例为切入点，带大家一起一步步揭开自定义事件背后的秘密。
 
-```
+
 ``<div id="app"></div>  
 <script> const app = Vue.createApp({  
      template: '<welcome-button v-on:welcome="sayHi"></welcome-button>',  
@@ -34,7 +34,6 @@ tags:
       `  
     })  
     app.mount("#app")</script>  
-``
 ```
 
 在以上示例中，我们先通过 `Vue.createApp` 方法创建 `app` 对象，之后利用该对象上的 `component` 方法注册全局组件 ——  **welcome-button** 组件。在定义该组件时，我们通过 `emits` 属性定义了该组件上的自定义事件。当然用户点击 **欢迎** 按钮时，就会发出 `welcome` 事件，之后就会调用 `sayHi` 方法，接着控制台就会输出 **你好!** 。
@@ -67,7 +66,7 @@ tags:
 通过 `[[FunctionLocation]]` 属性，我们找到了 `get` 捕获器的定义，具体如下所示：
 
 ```
-``// packages/runtime-core/src/componentPublicInstance.ts  
+// packages/runtime-core/src/componentPublicInstance.ts  
 export const RuntimeCompiledPublicInstanceProxyHandlers = extend(  
   {},  
   PublicInstanceProxyHandlers,  
@@ -86,13 +85,12 @@ export const RuntimeCompiledPublicInstanceProxyHandlers = extend(
     }  
   }  
 )  
-``
 ```
 
 观察以上代码可知，在 `get` 捕获器内部会继续调用 `PublicInstanceProxyHandlers` 对象的 `get` 方法来获取 `key` 对应的值。由于 `PublicInstanceProxyHandlers` 内部的代码相对比较复杂，这里我们只分析与示例相关的代码：
 
 ```
-`// packages/runtime-core/src/componentPublicInstance.ts  
+// packages/runtime-core/src/componentPublicInstance.ts  
 export const PublicInstanceProxyHandlers: ProxyHandler<any> = {  
   get({ _: instance }: ComponentRenderContext, key: string) {  
     const { ctx, setupState, data, props, accessCache, type, appContext } = instance  
@@ -109,13 +107,12 @@ export const PublicInstanceProxyHandlers: ProxyHandler<any> = {
     },  
     // 省略set和has捕获器  
 }  
-`
 ```
 
 在上面代码中，我们看到了 `publicPropertiesMap` 对象，该对象被定义在 `componentPublicInstance.ts` 文件中：
 
 ```
-`// packages/runtime-core/src/componentPublicInstance.ts  
+// packages/runtime-core/src/componentPublicInstance.ts  
 const publicPropertiesMap: PublicPropertiesMap = extend(Object.create(null), {  
   $: i => i,  
   $el: i => i.vnode.el,  
@@ -132,7 +129,6 @@ const publicPropertiesMap: PublicPropertiesMap = extend(Object.create(null),
   $nextTick: i => nextTick.bind(i.proxy!),  
   $watch: i => (__FEATURE_OPTIONS_API__ ? instanceWatch.bind(i) : NOOP)  
 } as PublicPropertiesMap)  
-`
 ```
 
 在 `publicPropertiesMap` 对象中，我们找到了 `$emit` 属性，该属性的值为 `$emit: i => i.emit`，即 `$emit` 指向的是参数 `i` 对象的 `emit` 属性。下面我们来看一下，当获取 `$emit` 属性时，`target` 对象是什么：
@@ -146,7 +142,7 @@ const publicPropertiesMap: PublicPropertiesMap = extend(Object.create(null),
 在上图中，我们看到了在组件挂载阶段，调用了 `createComponentInstance` 函数。顾名思义，该函数用于创建组件实例，其具体实现如下所示：
 
 ```
-`// packages/runtime-core/src/component.ts  
+// packages/runtime-core/src/component.ts  
 export function createComponentInstance( vnode: VNode,  
   parent: ComponentInternalInstance | null,  
   suspense: SuspenseBoundary | null) {  
@@ -174,7 +170,6 @@ export function createComponentInstance( vnode: VNode,
   
   return instance  
 }  
-`
 ```
 
 在以上代码中，我们除了发现 `instance` 对象之外，还看到了 `instance.emit = emit.bind(null, instance)` 这个语句。这时我们就找到了 `$emit` 方法来自哪里的答案。弄清楚第一个问题之后，接下来我们来分析自定义事件的处理流程。
@@ -184,7 +179,7 @@ export function createComponentInstance( vnode: VNode,
 要搞清楚，为什么点击 **欢迎** 按钮派发 `welcome` 事件之后，就会自动调用 `sayHi` 方法的原因。我们就必须分析 `emit` 函数的内部处理逻辑，该函数被定义在 `runtime-core/src/componentEmits.t` 文件中：
 
 ```
-`// packages/runtime-core/src/componentEmits.ts  
+// packages/runtime-core/src/componentEmits.ts  
 export function emit( instance: ComponentInternalInstance,  
   event: string,  
   ...rawArgs: any[]) {  
@@ -205,7 +200,6 @@ export function emit( instance: ComponentInternalInstance,
     )  
   }  
 }  
-`
 ```
 
 其实在 `emit` 函数内部还会涉及 `v-model update:xxx` 事件的处理，关于 `v-model` 指令的内部原理，会写单独的文章来介绍。这里我们只分析与当前示例相关的处理逻辑。
@@ -213,17 +207,16 @@ export function emit( instance: ComponentInternalInstance,
 在 `emit` 函数中，会使用 `toHandlerKey` 函数把事件名转换为驼峰式的 `handlerName`：
 
 ```
-```// packages/shared/src/index.ts  
+// packages/shared/src/index.ts  
 export const toHandlerKey = cacheStringFunction(  
   (str: string) => (str ? `on${capitalize(str)}` : ``)  
 )  
-```
 ```
 
 在获取 `handlerName` 之后，就会从 `props` 对象上获取该 `handlerName` 对应的 `handler` 对象。如果该 `handler` 对象存在，则会调用 `callWithAsyncErrorHandling` 函数，来执行当前自定义事件对应的事件处理函数。`callWithAsyncErrorHandling` 函数的定义如下：
 
 ```
-`// packages/runtime-core/src/errorHandling.ts  
+// packages/runtime-core/src/errorHandling.ts  
 export function callWithAsyncErrorHandling( fn: Function | Function[],  
   instance: ComponentInternalInstance | null,  
   type: ErrorTypes,  
@@ -245,13 +238,12 @@ export function callWithAsyncErrorHandling( fn: Function | Function[],
   }  
   return values  
 }  
-`
 ```
 
 通过以上代码可知，如果 `fn` 参数是函数对象的话，在 `callWithAsyncErrorHandling` 函数内部还会继续调用 `callWithErrorHandling` 函数来最终执行事件处理函数：
 
 ```
-`// packages/runtime-core/src/errorHandling.ts  
+// packages/runtime-core/src/errorHandling.ts  
 export function callWithErrorHandling( fn: Function,  
   instance: ComponentInternalInstance | null,  
   type: ErrorTypes,  
@@ -264,7 +256,6 @@ export function callWithErrorHandling( fn: Function,
   }  
   return res  
 }  
-`
 ```
 
 在 `callWithErrorHandling` 函数内部，使用 `try catch` 语句来捕获异常并进行异常处理。如果调用 `fn` 事件处理函数之后，返回的是一个 `Promise` 对象的话，则会通过 `Promise` 对象上的 `catch` 方法来处理异常。了解完上面的内容，再回顾一下前面见过的函数调用栈，相信此时你就不会再陌生了。
@@ -276,7 +267,7 @@ export function callWithErrorHandling( fn: Function,
 **App 组件模板**
 
 ```
-`<welcome-button v-on:welcome="sayHi"></welcome-button>  
+<welcome-button v-on:welcome="sayHi"></welcome-button>  
   
 const _Vue = Vue  
 return function render(_ctx, _cache, $props, $setup, $data, $options) {  
@@ -289,13 +280,12 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
      { onWelcome: sayHi }, null, 8 /* PROPS */, ["onWelcome"]))  
   }  
 }  
-`
 ```
 
 **welcome-button 组件模板**
 
 ```
-`<button v-on:click="$emit('welcome')">欢迎</button>  
+<button v-on:click="$emit('welcome')">欢迎</button>  
   
 const _Vue = Vue  
 return function render(_ctx, _cache, $props, $setup, $data, $options) {  
@@ -308,13 +298,12 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, "欢迎", 8 /* PROPS */, ["onClick"]))  
   }  
 }  
-`
 ```
 
 观察以上结果，我们可知通过 `v-on:` 绑定的事件，都会转换为以 `on` 开头的属性，比如 `onWelcome` 和 `onClick`。为什么要转换成这种形式呢？这是因为在 `emit` 函数内部会通过 `toHandlerKey` 和 `camelize` 这两个函数对事件名进行转换：
 
 ```
-`// packages/runtime-core/src/componentEmits.ts  
+// packages/runtime-core/src/componentEmits.ts  
 export function emit( instance: ComponentInternalInstance,  
   event: string,  
   ...rawArgs: any[]) {  
@@ -323,13 +312,12 @@ export function emit( instance: ComponentInternalInstance,
   let handlerName = toHandlerKey(camelize(event))  
   let handler = props[handlerName]  
 }  
-`
 ```
 
 为了搞清楚转换规则，我们先来看一下 `camelize` 函数：
 
 ```
-`// packages/shared/src/index.ts  
+// packages/shared/src/index.ts  
 const camelizeRE = /-(\w)/g  
   
 export const camelize = cacheStringFunction(  
@@ -337,13 +325,12 @@ export const camelize = cacheStringFunction(
     return str.replace(camelizeRE, (_, c) => (c ? c.toUpperCase() : ''))  
   }  
 )  
-`
 ```
 
 观察以上代码，我们可以知道 `camelize` 函数的作用，用于把 kebab-case (短横线分隔命名) 命名的事件名转换为 camelCase (驼峰命名法) 的事件名，比如 `"test-event"` 事件名经过 `camelize` 函数处理后，将被转换为 `"testEvent"`。该转换后的结果，还会通过 `toHandlerKey` 函数进行进一步处理，`toHandlerKey` 函数被定义在 `shared/src/index.ts` 文件中：
 
 ```
-```// packages/shared/src/index.ts  
+// packages/shared/src/index.ts  
 export const toHandlerKey = cacheStringFunction(  
   (str: string) => (str ? `on${capitalize(str)}` : ``)  
 )  
@@ -352,12 +339,11 @@ export const capitalize = cacheStringFunction(
   (str: string) => str.charAt(0).toUpperCase() + str.slice(1)  
 )  
 ```
-```
 
 对于前面使用的 `"testEvent"` 事件名经过 `toHandlerKey` 函数处理后，将被最终转换为 `"onTestEvent"` 的形式。为了能够更直观地了解事件监听器的合法形式，我们来看一下 `runtime-core` 模块中的测试用例：
 
 ```
-`// packages/runtime-core/__tests__/componentEmits.spec.ts  
+// packages/runtime-core/__tests__/componentEmits.spec.ts  
 test('isEmitListener', () => {  
   const options = {  
     click: null,  
@@ -378,13 +364,12 @@ test('isEmitListener', () => {
   // PascalCase option  
   expect(isEmitListener(options, 'onFooBaz')).toBe(true)  
 })  
-`
 ```
 
 了解完事件监听器的合法形式之后，我们再来看一下 `cacheStringFunction` 函数：
 
 ```
-`// packages/shared/src/index.ts  
+// packages/shared/src/index.ts  
 const cacheStringFunction = <T extends (str: string) => string>(fn: T): T => {  
   const cache: Record<string, string> = Object.create(null)  
   return ((str: string) => {  
@@ -392,7 +377,6 @@ const cacheStringFunction = <T extends (str: string) => string>(fn: T):
     return hit || (cache[str] = fn(str))  
   }) as any  
 }  
-`
 ```
 
 以上代码也比较简单，`cacheStringFunction` 函数的作用是为了实现缓存功能。
@@ -404,7 +388,7 @@ const cacheStringFunction = <T extends (str: string) => string>(fn: T):
 在前面的示例中，我们通过 `v-on` 指令完成事件绑定，那么在渲染函数中如何绑定事件呢？
 
 ```
-`<div id="app"></div>  
+<div id="app"></div>  
 <script> const { createApp, defineComponent, h } = Vue  
     
   const Foo = defineComponent({  
@@ -420,7 +404,6 @@ const cacheStringFunction = <T extends (str: string) => string>(fn: T):
   const Comp = () => h(Foo, { onFoo })  
   const app = createApp(Comp);  
   app.mount("#app")</script>  
-`
 ```
 
 在以上示例中，我们通过 `defineComponent` 全局 API 定义了 `Foo` 组件，然后通过 `h` 函数创建了函数式组件 `Comp`，在创建 `Comp` 组件时，通过设置 `onFoo` 属性实现了自定义事件的绑定操作。
@@ -430,7 +413,7 @@ const cacheStringFunction = <T extends (str: string) => string>(fn: T):
 ##### 在模板中设置
 
 ```
-`<welcome-button v-on:welcome.once="sayHi"></welcome-button>  
+<welcome-button v-on:welcome.once="sayHi"></welcome-button>  
   
 const _Vue = Vue  
 return function render(_ctx, _cache, $props, $setup, $data, $options) {  
@@ -443,13 +426,12 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
       { onWelcomeOnce: sayHi }, null, 8 /* PROPS */, ["onWelcomeOnce"]))  
   }  
 }  
-`
 ```
 
 在以上代码中，我们使用了 `once` 事件修饰符，来实现只执行一次事件处理器的功能。除了 `once` 修饰符之外，还有其他的修饰符，比如：
 
 ```
-`<!-- 阻止单击事件继续传播 -->  
+<!-- 阻止单击事件继续传播 -->  
 <a @click.stop="doThis"></a>  
   
 <!-- 提交事件不再重载页面 -->  
@@ -468,13 +450,12 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
 <!-- 只当在 event.target 是当前元素自身时触发处理函数 -->  
 <!-- 即事件不是从内部元素触发的 -->  
 <div @click.self="doThat">...</div>  
-`
 ```
 
 ##### 在渲染函数中设置
 
 ```
-`<div id="app"></div>  
+<div id="app"></div>  
 <script>  
    const { createApp, defineComponent, h } = Vue  
    const Foo = defineComponent({  
@@ -493,13 +474,12 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
    const app = createApp(Comp);  
    app.mount("#app")  
 </script>  
-`
 ```
 
 以上两种方式都能生效的原因是，模板中的指令 `v-on:welcome.once`，经过编译后会转换为`onWelcomeOnce`，并且在 `emit` 函数中定义了 `once` 修饰符的处理规则：
 
 ```
-``// packages/runtime-core/src/componentEmits.ts  
+// packages/runtime-core/src/componentEmits.ts  
 export function emit( instance: ComponentInternalInstance,  
   event: string,  
   ...rawArgs: any[]) {  
@@ -520,7 +500,6 @@ export function emit( instance: ComponentInternalInstance,
     )  
   }  
 }  
-``
 ```
 
 #### 3.3 如何添加多个事件处理器
@@ -528,7 +507,7 @@ export function emit( instance: ComponentInternalInstance,
 ##### 在模板中设置
 
 ```
-`<div @click="foo(), bar()"/>  
+<div @click="foo(), bar()"/>  
     
 const _Vue = Vue  
 return function render(_ctx, _cache, $props, $setup, $data, $options) {  
@@ -540,14 +519,13 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: $event => (foo(), bar())  
     }, null, 8 /* PROPS */, ["onClick"]))  
   }  
-}  
-`
+} 
 ```
 
 ##### 在渲染函数中设置
 
 ```
-`<div id="app"></div>  
+<div id="app"></div>  
 <script> const { createApp, defineComponent, h } = Vue  
    const Foo = defineComponent({  
      emits: ["foo"],   
@@ -565,13 +543,12 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
    const Comp = () => h(Foo, { onFoo: [onFoo, onBar] })  
    const app = createApp(Comp);  
   app.mount("#app")</script>  
-`
 ```
 
 以上方式能够生效的原因是，在前面介绍的 `callWithAsyncErrorHandling` 函数中含有多个事件处理器的处理逻辑：
 
 ```
-`// packages/runtime-core/src/errorHandling.ts  
+// packages/runtime-core/src/errorHandling.ts  
 export function callWithAsyncErrorHandling( fn: Function | Function[],  
   instance: ComponentInternalInstance | null,  
   type: ErrorTypes,  
@@ -586,7 +563,6 @@ export function callWithAsyncErrorHandling( fn: Function | Function[],
   }  
   return values  
 }  
-`
 ```
 
 #### 3.4 Vue 3 的 `$emit` 与 Vue 2 的 `$emit` 有什么区别？
@@ -594,7 +570,7 @@ export function callWithAsyncErrorHandling( fn: Function | Function[],
 在 Vue 2 中 `$emit` 方法是 `Vue.prototype` 对象上的属性，而 Vue 3 上的 `$emit` 是组件实例上的一个属性，`instance.emit = emit.bind(null, instance)`。
 
 ```
-``// src/core/instance/events.js  
+// src/core/instance/events.js  
 export function eventsMixin (Vue: Class<Component>) {  
   const hookRE = /^hook:/  
   
@@ -614,7 +590,6 @@ export function eventsMixin (Vue: Class<Component>) {
     return vm  
   }  
 }  
-``
 ```
 
 本文主要介绍了在 Vue 3 中自定义事件背后的秘密。为了让大家能够更深入地掌握自定义事件的相关知识，从源码的角度分析了 `$emit` 方法的来源和自定义事件的处理流程。
