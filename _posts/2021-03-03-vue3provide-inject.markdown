@@ -227,12 +227,12 @@ const app = createApp({
   `  
 })  
   
-app.provide('name', '阿宝哥')  
+app.provide('name', '啊啊啊')  
 ```
 
 需要注意的是，`app.provide` 方法不应该与 `provide` 组件选项或组合式 API 中的 `provide` 方法混淆。虽然它们也是相同的 **provide/inject** 机制的一部分，但是是用来配置组件 `provide` 的值而不是应用 `provide` 的值。
 
-介绍完 `app.provide` 方法之后，我们来了解一下它的实现。看过 **”Vue 3.0 进阶“** 系列教程的小伙伴，对 `app` 对象应该不会陌生。因为在前面的文章中，阿宝哥已经介绍过 `component`、`directive` 和 `mount` 等方法。接下来，我们来看一下 `provide` 方法的具体实现：
+介绍完 `app.provide` 方法之后，我们来了解一下它的实现。看过 **”Vue 3.0 进阶“** 系列教程的小伙伴，对 `app` 对象应该不会陌生。因为在前面的文章中，已经介绍过 `component`、`directive` 和 `mount` 等方法。接下来，我们来看一下 `provide` 方法的具体实现：
 
 ```
 // packages/runtime-core/src/apiCreateApp.ts  
@@ -275,7 +275,7 @@ export function createAppContext(): AppContext {
 }  
 ```
 
-### 五、阿宝哥有话说
+### 五、有话说
 
 #### 5.1 在嵌套的 providers 场景下，存在同名的 key 会怎么样？
 
@@ -329,7 +329,7 @@ fooOverride,bar,baz
 <div id="app"></div>  
 <script>  
    const { createApp, h, provide, inject, ref, onMounted } = Vue  
-   const nameRef = ref("阿宝哥");  
+   const nameRef = ref("啊啊啊");  
    const app = createApp({  
      setup() {  
        provide("name", nameRef);  
@@ -358,11 +358,11 @@ fooOverride,bar,baz
 
 此外，在 `setup` 方法内部，我们还使用了 `onMounted` 生命周期钩子，在钩子对应的回调函数中，我们延迟 2S 修改 `nameRef` 对象的值。
 
-以上示例成功运行后，首先会先显示 **大家好，我是阿宝哥!**，差不多 2S 后页面会刷新为 **大家好，我是kakuqo!**。
+以上示例成功运行后，首先会先显示 **大家好，我是啊啊啊!**，差不多 2S 后页面会刷新为 **大家好，我是kakuqo!**。
 
 #### 5.3 是否支持 self-inject？
 
-什么是 `self-inject` 呢？这里阿宝哥不做过多解释，我们直接来看个具体的例子：
+什么是 `self-inject` 呢？这里不做过多解释，我们直接来看个具体的例子：
 
 ```
 <div id="app"></div>  
@@ -374,7 +374,7 @@ fooOverride,bar,baz
      
    const Provider = {  
      setup() {  
-       provide('name', '阿宝哥')  
+       provide('name', '啊啊啊')  
        const injectedName = inject('name')  
        return () => h(injectedName)  
      }  
@@ -409,7 +409,7 @@ function _createVNode( type: VNodeTypes | ClassComponent | typeof NULL_DY
 }  
 ```
 
-本文阿宝哥主要介绍了依赖注入的概念及作用、如何使用 Vue 3 提供的 **provide/inject** 特性。为了让大家能够更深入地理解 **provide/inject** 特性，阿宝哥从源码角度分析了 `provide` 和 `inject` 函数的具体实现。在后续的文章中，阿宝哥将会介绍在插件中如何应用 **provide/inject** 特性，感兴趣的小伙伴不要错过哟。
+本文主要介绍了依赖注入的概念及作用、如何使用 Vue 3 提供的 **provide/inject** 特性。为了让大家能够更深入地理解 **provide/inject** 特性，从源码角度分析了 `provide` 和 `inject` 函数的具体实现。在后续的文章中，将会介绍在插件中如何应用 **provide/inject** 特性，感兴趣的小伙伴不要错过哟。
 
 ### 六、参考资源
 
