@@ -13,7 +13,7 @@ tags:
 ---
 本文是 **Vue 3.0 进阶系列** 的第五篇文章，在这篇文章中，将介绍 Vue 3 中的核心对象 —— `VNode`，该对象用于描述节点的信息，它的全称是虚拟节点（virtual node）。**与 “虚拟节点” 相关联的另一个概念是 “虚拟 DOM”，它是我们对由 Vue 组件树建立起来的整个 VNode 树的称呼**。通常一个 Vue 应用会以一棵嵌套的组件树的形式来组织：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/jQmwTIFl1V3icwafqV0wKBOpMjsjFwyLFh2UEJwCdx3XPMTzWwbVuKnB7ds0CicvKceeh29G1QzLVicM3NmMfxoPQ/640?wx_fmt=png)
+<img src='https://mmbiz.qpic.cn/mmbiz_png/jQmwTIFl1V3icwafqV0wKBOpMjsjFwyLFh2UEJwCdx3XPMTzWwbVuKnB7ds0CicvKceeh29G1QzLVicM3NmMfxoPQ/640?wx_fmt=png' />
 
 （图片来源：https://v3.cn.vuejs.org/）
 
