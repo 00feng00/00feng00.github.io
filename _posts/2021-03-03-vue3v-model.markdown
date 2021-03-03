@@ -71,7 +71,7 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 ```
 
-在 `<input v-model="searchText" />` 模板生成的渲染函数中，我们看到了 [**Vue 3.0 进阶之指令探秘**](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==&mid=2247489741&idx=1&sn=c8cff2acbe2f011dc190c9fb495ef6e3&scene=21#wechat_redirect) 文章中介绍的 `withDirectives` 函数，该函数用于把指令信息添加到 `VNode` 对象上，它被定义在 `runtime-core/src/directives.ts` 文件中：
+在 `<input v-model="searchText" />` 模板生成的渲染函数中， `withDirectives` 函数，该函数用于把指令信息添加到 `VNode` 对象上，它被定义在 `runtime-core/src/directives.ts` 文件中：
 
 ```
 // packages/runtime-core/src/directives.ts  
@@ -367,7 +367,7 @@ return function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 ```
 
-通过观察以上的渲染函数，我们可知在 `custom-input` 组件上应用了 `v-model` 指令，经过编译器编译之后，会生成一个名为 `modelValue` 的输入属性和一个名为 `update:modelValue` 的自定义事件名。如果你对自定义事件内部原理还不清楚的话，可以阅读 [**Vue 3.0 进阶之自定义事件探秘**](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==&mid=2247489839&idx=1&sn=8f1395b9b72a6a2db1fdf500cb048669&scene=21#wechat_redirect) 这篇文章。了解完这些内容之后，我们就可以开始实现 `custom-input` 组件了：
+通过观察以上的渲染函数，我们可知在 `custom-input` 组件上应用了 `v-model` 指令，经过编译器编译之后，会生成一个名为 `modelValue` 的输入属性和一个名为 `update:modelValue` 的自定义事件名。了解完这些内容之后，我们就可以开始实现 `custom-input` 组件了：
 
 ```
 <div id="app">  
