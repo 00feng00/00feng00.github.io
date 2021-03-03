@@ -15,7 +15,8 @@ tags:
 这是 **Vue 3.0 进阶系列** 的第二篇文章。本文将以一个简单的示例为切入点，带大家一起一步步揭开自定义事件背后的秘密。
 
 
-``<div id="app"></div>  
+```
+<div id="app"></div>  
 <script> const app = Vue.createApp({  
      template: '<welcome-button v-on:welcome="sayHi"></welcome-button>',  
      methods: {  
