@@ -446,7 +446,6 @@ app.component('custom-input', {
 
 ```
 
-至于自定义的事件名为什么是 `"onUpdate:name"` 这种形式，你可以从 [**Vue 3.0 进阶之自定义事件探秘**](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==&mid=2247489839&idx=1&sn=8f1395b9b72a6a2db1fdf500cb048669&scene=21#wechat_redirect) 这篇文章中介绍的 `emit` 函数中找到对应的答案。
 
 #### 3.2 能否在组件上使用多个 v-model 指令？
 
