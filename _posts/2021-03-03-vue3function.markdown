@@ -12,7 +12,7 @@ tags:
     - 源码
 ---
 
-这是 **Vue 3.0 进阶系列** 的第二篇文章，该系列的第一篇文章是 [Vue 3.0 进阶之指令探秘](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==&mid=2247489741&idx=1&sn=c8cff2acbe2f011dc190c9fb495ef6e3&scene=21#wechat_redirect)。本文将以一个简单的示例为切入点，带大家一起一步步揭开自定义事件背后的秘密。
+这是 **Vue 3.0 进阶系列** 的第二篇文章。本文将以一个简单的示例为切入点，带大家一起一步步揭开自定义事件背后的秘密。
 
 ```
 ``<div id="app"></div>  
