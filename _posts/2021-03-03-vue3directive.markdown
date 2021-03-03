@@ -63,7 +63,7 @@ app.directive('focus', {
 `
 ```
 
-当页面加载完成后，页面中的输入框元素将自动获得焦点。该示例的代码比较简单，主要包含 3 个步骤：**创建 App 对象、注册全局自定义指令和应用挂载**。其中创建 App 对象的细节，阿宝哥会在后续的文章中单独介绍，下面我们将重点分析其他 2 个步骤。首先我们先来分析注册全局自定义指令的过程。
+当页面加载完成后，页面中的输入框元素将自动获得焦点。该示例的代码比较简单，主要包含 3 个步骤：**创建 App 对象、注册全局自定义指令和应用挂载**。其中创建 App 对象的细节，在后续的文章中单独介绍，下面我们将重点分析其他 2 个步骤。首先我们先来分析注册全局自定义指令的过程。
 
 ### 二、注册全局自定义指令的过程
 
@@ -246,7 +246,7 @@ export function createAppContext(): AppContext {
 
 ### 三、应用挂载的过程
 
-为了更加直观地了解应用挂载的过程，阿宝哥利用 **Chrome 开发者工具**，记录了应用挂载的主要过程：
+为了更加直观地了解应用挂载的过程，利用 **Chrome 开发者工具**，记录了应用挂载的主要过程：
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/jQmwTIFl1V37dTncbsSHhsibNbic3bVCRibhKh2o5l3Vtic5877cW10IHxibDTJwTScuIhOnlExI16d6bD5tc3uTUNg/640?wx_fmt=png)
 
@@ -377,13 +377,13 @@ export interface ObjectDirective<T = any, V = any> {
 `
 ```
 
-好的，接下来我们来分析一下 `focus` 指令上定义的钩子什么时候被调用。同样，阿宝哥在 `focus` 指令的 `mounted` 方法中加个断点：
+好的，接下来我们来分析一下 `focus` 指令上定义的钩子什么时候被调用。同样，在 `focus` 指令的 `mounted` 方法中加个断点：
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/jQmwTIFl1V37dTncbsSHhsibNbic3bVCRibrvKbWI6fC57oVL2ew3OmD2CNDJW1sJoRJYbrMeZBZf6YoK3LbEHiaEQ/640?wx_fmt=jpeg)
 
-在图中右侧的调用栈中，我们看到了 `invokeDirectiveHook` 函数，很明显该函数的作用就是调用指令上已注册的钩子。出于篇幅考虑，具体的细节阿宝哥就不继续介绍了，感兴趣的小伙伴可以自行断点调试一下。
+在图中右侧的调用栈中，我们看到了 `invokeDirectiveHook` 函数，很明显该函数的作用就是调用指令上已注册的钩子。出于篇幅考虑，具体的细节就不继续介绍了，感兴趣的小伙伴可以自行断点调试一下。
 
-### 四、阿宝哥有话说
+### 四、有话说
 
 #### 4.1 Vue 3 有哪些内置指令？
 
@@ -520,7 +520,7 @@ function resolveAsset( type: typeof COMPONENTS | typeof DIRECTIVES,
 
 #### 4.4 内置指令和自定义指令生成的渲染函数有什么区别？
 
-要了解内置指令和自定义指令生成的渲染函数的区别，阿宝哥以 `v-if` 、`v-show` 内置指令和 `v-focus` 自定义指令为例，然后使用 Vue 3 Template Explorer 这个在线工具来编译生成渲染函数：
+要了解内置指令和自定义指令生成的渲染函数的区别，以 `v-if` 、`v-show` 内置指令和 `v-focus` 自定义指令为例，然后使用 Vue 3 Template Explorer 这个在线工具来编译生成渲染函数：
 
 ##### v-if 内置指令
 
