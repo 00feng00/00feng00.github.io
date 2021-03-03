@@ -49,8 +49,6 @@ tags:
 
 在以上示例中，我们在 `input` 搜索输入框中应用了 `v-model` 指令，当输入框的内容发生变化时，`p` 标签中内容会同步更新。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/jQmwTIFl1V2m3ibfG5uTjOTaZqZtNWm8AvAtoVwC4MnAVj3uqcnd2ZLAWfNr5kYiaib6kDEpJ2oJEB9WAjOBmljug/640?wx_fmt=jpeg)
-
 要揭开 `v-model` 指令背后的秘密，我们可以利用 **Vue 3 Template Explorer** 在线工具，来看一下模板编译后的结果：
 
 ```
