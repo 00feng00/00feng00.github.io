@@ -50,11 +50,9 @@ tags:
 
 ### 一、$emit 方法来自哪里？
 
-使用 Chrome 开发者工具，我们在 `sayHi` 方法内部加个断点，然后点击 **欢迎** 按钮，此时函数调用栈如下图所示：
+使用 Chrome 开发者工具，我们在 `sayHi` 方法内部加个断点
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/jQmwTIFl1V1dR1hibEIxOnFT8qfF8TicTbNicTYN05q4M4scuKbXLMTIcyb0Hl2JxumkaYdC0GNDbp95yzNoRXjcw/640?wx_fmt=jpeg)
-
-在上图右侧的调用栈，我们发现了一个存在于 `componentEmits.ts` 文件中的 `emit` 方法。但在模板中，我们使用的是 `$emit` 方法，为了搞清楚这个问题，我们来看一下 `onClick` 方法：
+我们发现了一个存在于 `componentEmits.ts` 文件中的 `emit` 方法。但在模板中，我们使用的是 `$emit` 方法，为了搞清楚这个问题，我们来看一下 `onClick` 方法：
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/jQmwTIFl1V1dR1hibEIxOnFT8qfF8TicTbic72HWUyzEiaBEzXWHbcXYbAxqpoabWNZG3LsmmSsY01rFaezDeKo4SA/640?wx_fmt=jpeg)
 
@@ -621,7 +619,6 @@ export function eventsMixin (Vue: Class<Component>) {
 
 本文主要介绍了在 Vue 3 中自定义事件背后的秘密。为了让大家能够更深入地掌握自定义事件的相关知识，从源码的角度分析了 `$emit` 方法的来源和自定义事件的处理流程。
 
-在 Vue 3.0 进阶系列第一篇文章 [Vue 3.0 进阶之指令探秘](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==&mid=2247489741&idx=1&sn=c8cff2acbe2f011dc190c9fb495ef6e3&scene=21#wechat_redirect) 中，我们已经介绍了指令相关的知识，有了这些基础，之后将带大家一起探索 Vue 3 双向绑定的原理，感兴趣的小伙伴不要错过哟。
 
 ### 四、参考资源
 
@@ -630,8 +627,4 @@ export function eventsMixin (Vue: Class<Component>) {
 *   Vue 3 官网 - 自定义事件
     
 *   Vue 3 官网 - 全局 API
-    
 
-**聚焦全栈，专注分享 TypeScript、Web API、前端架构等技术干货。**
-
-![](https://mmbiz.qpic.cn/mmbiz_png/jQmwTIFl1V2mwZjG8T1LDomW0BIojAlLLzicDRktticyGHQwG0SoxC2vTtleOCIPBFrUia681Mnr8EmHpRxZH0aPg/640?wx_fmt=png)
