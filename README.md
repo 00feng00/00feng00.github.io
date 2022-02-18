@@ -18,3 +18,6 @@ Copyright (c) 2015-2016 00feng00
 
 ZeFeng Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
 Copyright (c) 2013-2016 Blackrock Digital LLC.
+
+## contcat
+![](https://00feng00.github.io/img/qdzc_logo.jpg)
