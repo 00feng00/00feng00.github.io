@@ -20,4 +20,4 @@ ZeFeng Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://gith
 Copyright (c) 2013-2016 Blackrock Digital LLC.
 
 ## contcat
-![](https://00feng00.github.io/img/qdzc_logo.jpg)
+<img src="https://00feng00.github.io/img/qdzc_logo.jpg" width="300"/>
